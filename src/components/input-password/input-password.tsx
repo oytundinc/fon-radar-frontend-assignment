@@ -1,21 +1,21 @@
 import { Form, InputProps as AntInputProps } from "antd";
-import { InputStyled } from "./input.styles";
+import { InputPasswordStyled } from "./input-password.styles";
 
-export interface InputProps extends AntInputProps {
+export interface InputPasswordProps extends AntInputProps {
   placeholder: string;
   disable?: boolean;
   label: string;
   layout: "vertical" | "horizontal";
 }
 
-export const Input = ({ label, ...props }: InputProps) => {
+export const InputPassword = ({ label, ...props }: InputPasswordProps) => {
   return (
     <Form layout="vertical">
       <Form.Item label={label}>
-        <InputStyled {...props} />
+        <InputPasswordStyled {...props} />
       </Form.Item>
     </Form>
   );
 };
 
-export default Input;
+export default InputPassword;
