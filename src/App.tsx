@@ -1,24 +1,10 @@
 import "./App.css";
-import { Button } from "./components/button/button";
-import InputPassword from "./components/input-password/input-password";
-import Input from "./components/input/input";
+import { LoginPage } from "./pages/login-page/login-page";
 
 function App() {
   return (
     <div className="App">
-      <h1>start</h1>
-
-      <InputPassword
-        placeholder="Email adresi"
-        label="email adresi"
-        layout="horizontal"
-      />
-      <Button>Fon Radar</Button>
-      <Input
-        placeholder="Email adresi"
-        label="email adresi"
-        layout="vertical"
-      />
+      <LoginPage />
     </div>
   );
 }

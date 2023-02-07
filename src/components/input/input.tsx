@@ -10,7 +10,7 @@ export interface InputProps extends AntInputProps {
 
 export const Input = ({ label, ...props }: InputProps) => {
   return (
-    <Form layout="vertical">
+    <Form layout="vertical" className="input-container">
       <Form.Item label={label}>
         <InputStyled {...props} />
       </Form.Item>
