@@ -1,12 +1,12 @@
 import "./App.css";
-import WrappedSelect from "./components/select/select";
 import { LoginPage } from "./pages/login-page/login-page";
+import Header from "./widgets/header/header";
 
 function App() {
   return (
     <div className="App">
+      <Header/>
       <LoginPage />
-      <WrappedSelect />
     </div>
   );
 }
