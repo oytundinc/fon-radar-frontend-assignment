@@ -10,7 +10,7 @@ export interface InputPasswordProps extends AntInputProps {
 
 export const InputPassword = ({ label, ...props }: InputPasswordProps) => {
   return (
-    <Form layout="vertical">
+    <Form layout="vertical" className="input-password-container">
       <Form.Item label={label}>
         <InputPasswordStyled {...props} />
       </Form.Item>

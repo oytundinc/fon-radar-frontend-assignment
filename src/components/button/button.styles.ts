@@ -8,7 +8,7 @@ export const ButtonStyled = styled(AntButton)`
   width: 100%;
 
   padding: 20px 0;
-  border-radius: 2px;
+  border-radius: 6px;
   border: none;
 
   background-color: #255a88;
