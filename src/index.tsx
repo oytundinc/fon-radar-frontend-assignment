@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import i18n from './assets/i18n/i18n';
 
+i18n.init();
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

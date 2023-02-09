@@ -1,0 +1,10 @@
+{
+    "loginPage": {
+        "header": "用户登录",
+        "inputPlaceholder": "电子邮件地址",
+        "inputLabel": "电子邮件", 
+        "passwordInputPlaceholder": "密码",
+        "passwordInputLabel": "密码",
+        "button": "登录"
+    }
+}

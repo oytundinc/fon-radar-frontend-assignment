@@ -1,0 +1,10 @@
+{
+    "loginPage": {
+        "header": "User Login",
+        "inputPlaceholder": "E-mail Address",
+        "inputLabel": "E-mail", 
+        "passwordInputPlaceholder": "Password",
+        "passwordInputLabel": "Password",
+        "button": "Login"
+    }
+}

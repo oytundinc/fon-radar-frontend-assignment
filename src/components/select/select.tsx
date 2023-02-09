@@ -1,24 +1,18 @@
 import { Select } from "antd";
 
-export const WrappedSelect = () => {
-  const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
-  };
+interface SelectProps {
+  options: { label: string; value: string }[];
+  defaultValue?: string;
+  onChange?: (value: string) => void;
+}
 
-  const optionsLanguage = [
-    { value: "TR", label: "Turkish" },
-    { value: "ENG", label: "English" },
-    { value: "CN", label: "Chinese" },
-    { value: "HE", label: "Hebrew"},
-  ];
+export const WrappedSelect = ({
+  options,
+  defaultValue,
+  onChange,
+}: SelectProps) => {
   return (
-    <Select
-      defaultValue="TR"
-      onChange={handleChange}
-      options={optionsLanguage}
-    >
-      optionsLanguage
-    </Select>
+    <Select defaultValue={defaultValue} options={options} onChange={onChange} />
   );
 };
 

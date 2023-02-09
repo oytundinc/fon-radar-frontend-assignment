@@ -1,6 +1,6 @@
 import "./App.css";
 import { LoginPage } from "./pages/login-page/login-page";
-import Header from "./widgets/header/header";
+import Header from "./pages/header/header";
 
 function App() {
   return (

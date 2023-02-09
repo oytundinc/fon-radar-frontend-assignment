@@ -1,0 +1,10 @@
+{
+    "loginPage": {
+        "header": "כניסת משתמש",
+        "inputPlaceholder": "כתובת דוא",
+        "inputLabel": "אימייל", 
+        "passwordInputPlaceholder": "סיסמה",
+        "passwordInputLabel": "סיסמה",
+        "button": "התחברות"
+    }
+}

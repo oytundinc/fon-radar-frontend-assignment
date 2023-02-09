@@ -1,4 +1,4 @@
-import WrappedSelect from "../../components/select/select";
+import LanguageSelect from "../../widgets/language-select/language-select";
 import { HeaderStyled } from "./header.styles";
 
 export const Header = () => {
@@ -11,7 +11,7 @@ export const Header = () => {
           className="header-logo"
         />
       </div>
-      <WrappedSelect />
+      <LanguageSelect />
     </HeaderStyled>
   );
 };

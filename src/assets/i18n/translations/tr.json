@@ -1,0 +1,10 @@
+{
+    "loginPage": {
+        "header": "Kullanıcı Girişi",
+        "inputPlaceholder": "E-posta Adresi",
+        "inputLabel": "E-mail", 
+        "passwordInputPlaceholder": "Şifre",
+        "passwordInputLabel": "Şifre",
+        "button": "Giriş Yap"
+    }
+}
