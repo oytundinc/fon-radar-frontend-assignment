@@ -7,7 +7,8 @@ export const HeaderStyled = styled.div`
 
   background: #fff;
   border-bottom: 2px solid #eaeaea;
-
+  
+  width: 100%;
   height: 80px;
 
   .header-logo {

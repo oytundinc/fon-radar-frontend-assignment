@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const LoginPageWrapped = styled.div`
   &.login-page-wrapped {
-    display: flex;
-    justify-content: center;
 
     .login-page {
       width: 100%;

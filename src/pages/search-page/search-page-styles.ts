@@ -4,7 +4,8 @@ export const SearchPageWrapped = styled.div`
   &.search-page-wrapped {
 
     .search-page {
-      margin: 120px 60px 0px 60px;
+      width: 80%;
+      margin: 120px 20px 0px 20px;
       padding: 20px;
       border: 1px solid #255a88;
       border-radius: 10px;

@@ -1,6 +1,7 @@
 import { Form } from "antd";
 //import { useTranslation } from 'react-i18next';
 import { DataTable } from "../../components/data-table/data-table";
+import LayoutContainer from "../../components/layout/layout";
 import { SearchInput } from "../../components/search-input/search-input";
 import { SearchPageWrapped } from "./search-page-styles";
 
@@ -55,11 +56,13 @@ export const SearchPage = () => {
 
   return (
     <SearchPageWrapped className="search-page-wrapped">
-      <Form className="search-page">
-        <h3 className="search-page-header">Müşterilerim</h3>
-        <SearchInput />
-        <DataTable dataSource={sources} columns={columns}/>
-      </Form>
+      <LayoutContainer>
+        <Form className="search-page">
+          <h3 className="search-page-header">Müşterilerim</h3>
+          <SearchInput />
+          <DataTable dataSource={sources} columns={columns} />
+        </Form>
+      </LayoutContainer>
     </SearchPageWrapped>
   );
 };

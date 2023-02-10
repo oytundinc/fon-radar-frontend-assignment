@@ -1,5 +1,5 @@
 import { Table } from "antd";
-import { StyledDataTable } from "./data-table.styles";
+import { DataTableStyled } from "./data-table.styles";
 
 type DataTableProps = {
   columns?: object[];
@@ -8,8 +8,8 @@ type DataTableProps = {
 
 export const DataTable = ({ dataSource, columns }: DataTableProps) => {
   return (
-    <StyledDataTable>
+    <DataTableStyled>
       <Table dataSource={dataSource} columns={columns} />
-    </StyledDataTable>
+    </DataTableStyled>
   );
 };
