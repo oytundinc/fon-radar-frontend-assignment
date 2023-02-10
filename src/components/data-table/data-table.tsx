@@ -2,14 +2,14 @@ import { Table } from "antd";
 import { StyledDataTable } from "./data-table.styles";
 
 type DataTableProps = {
-  cols?: [];
-  source?: [];
+  columns?: object[];
+  dataSource?: object[];
 };
 
-export const DataTable = ({ source, cols }: DataTableProps) => {
+export const DataTable = ({ dataSource, columns }: DataTableProps) => {
   return (
     <StyledDataTable>
-      <Table dataSource={source} columns={cols} />
+      <Table dataSource={dataSource} columns={columns} />
     </StyledDataTable>
   );
 };

@@ -1,12 +1,12 @@
 import "./App.css";
-import { LoginPage } from "./pages/login-page/login-page";
+import { SearchPage } from "./pages/search-page/search-page";
 import Header from "./pages/header/header";
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <LoginPage />
+      <SearchPage />
     </div>
   );
 }
