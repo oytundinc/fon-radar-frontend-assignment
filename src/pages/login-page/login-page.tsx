@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 export const LoginPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate()
-  const login = () => {navigate('/search-page')}
+  const login = () => {navigate('/customer-page')}
 
   return (
     <LoginPageWrapped className="login-page-wrapped">

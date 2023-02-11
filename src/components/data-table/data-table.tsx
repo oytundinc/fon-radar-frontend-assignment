@@ -5,20 +5,22 @@ type DataTableProps = {
   columns?: object[];
   dataSource?: object[];
   onClick?: () => void;
+  pagination?: boolean;
 };
 
-export const DataTable = ({
-  dataSource,
-  columns,
-  onClick,
-}: DataTableProps) => {
+export const DataTable = ({ dataSource, columns, onClick }: DataTableProps) => {
   return (
     <DataTableStyled>
-      <Table dataSource={dataSource} columns={columns} onRow={(record) => {
+      <Table
+        dataSource={dataSource}
+        columns={columns}
+        onRow={(row) => {
           return {
-            onClick: onClick
+            onClick: onClick,
           };
-        }} />
+        }}
+        scroll={{ y: 400 }}
+      />
     </DataTableStyled>
   );
 };

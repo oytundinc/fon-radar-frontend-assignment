@@ -1,34 +1,13 @@
 import { Form } from "antd";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 //import { useTranslation } from 'react-i18next';
 import { DataTable } from "../../components/data-table/data-table";
 import LayoutContainer from "../../components/layout/layout";
 import { SearchInput } from "../../components/search-input/search-input";
-import { SearchPageWrapped } from "./search-page-styles";
-
-const sources = [
-  {
-    key: "1",
-    companyName: "Mike",
-    taxNumber: 32,
-    taxOffice: "10 Downing Street",
-    invoiceCount: 2222,
-  },
-  {
-    key: "2",
-    companyName: "Mike",
-    taxNumber: 32,
-    taxOffice: "10 Downing Street",
-    invoiceCount: 2222,
-  },
-  {
-    key: "3",
-    companyName: "Mike",
-    taxNumber: 32,
-    taxOffice: "10 Downing Street",
-    invoiceCount: 2222,
-  },
-];
+import useCustomerApi from "../../service/customer/customer.api";
+import { CustomerData } from "../../service/customer/customer.model";
+import { CustomerPageWrapped } from "./customer-page-styles";
 
 const columns = [
   {
@@ -52,22 +31,37 @@ const columns = [
     key: "invoiceCount",
   },
 ];
-export const SearchPage = () => {
+
+
+export const CustomerPage = () => {
   //const { t } = useTranslation();
+  const [data, setData] = useState<CustomerData[]>([]);
   const navigate = useNavigate();
+  const { getAllCustomers } = useCustomerApi();
   const detail = () => {
     navigate("/detail-page");
   };
 
+  const fetchData = useCallback(async () => {
+    try {
+        const response = await getAllCustomers();
+        setData(response.data);
+    } catch (error) {}
+  }, [getAllCustomers]);
+
+  useEffect(() => {
+      fetchData();
+  }, [fetchData]);
+
   return (
-    <SearchPageWrapped className="search-page-wrapped">
+    <CustomerPageWrapped className="customer-page-wrapped">
       <LayoutContainer>
-        <Form className="search-page">
-          <h3 className="search-page-header">Müşterilerim</h3>
+        <Form className="customer-page">
+          <h3 className="customer-page-header">Müşterilerim</h3>
           <SearchInput />
-          <DataTable dataSource={sources} columns={columns} onClick={()=>{detail()}} />
+          <DataTable dataSource={data} columns={columns} onClick={()=>{detail()}} />
         </Form>
       </LayoutContainer>
-    </SearchPageWrapped>
+    </CustomerPageWrapped>
   );
 };
