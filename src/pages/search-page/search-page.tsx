@@ -1,4 +1,5 @@
 import { Form } from "antd";
+import { useNavigate } from "react-router-dom";
 //import { useTranslation } from 'react-i18next';
 import { DataTable } from "../../components/data-table/data-table";
 import LayoutContainer from "../../components/layout/layout";
@@ -53,6 +54,10 @@ const columns = [
 ];
 export const SearchPage = () => {
   //const { t } = useTranslation();
+  const navigate = useNavigate();
+  const detail = () => {
+    navigate("/detail-page");
+  };
 
   return (
     <SearchPageWrapped className="search-page-wrapped">
@@ -60,7 +65,7 @@ export const SearchPage = () => {
         <Form className="search-page">
           <h3 className="search-page-header">Müşterilerim</h3>
           <SearchInput />
-          <DataTable dataSource={sources} columns={columns} />
+          <DataTable dataSource={sources} columns={columns} onClick={()=>{detail()}} />
         </Form>
       </LayoutContainer>
     </SearchPageWrapped>

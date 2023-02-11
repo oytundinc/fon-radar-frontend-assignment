@@ -5,9 +5,13 @@ import InputPassword from "../../components/input-password/input-password";
 import Input from "../../components/input/input";
 import LayoutContainer from "../../components/layout/layout";
 import { LoginPageWrapped } from "./login-page.styles";
+import { useNavigate } from "react-router-dom";
+
 
 export const LoginPage = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate()
+  const login = () => {navigate('/search-page')}
 
   return (
     <LoginPageWrapped className="login-page-wrapped">
@@ -24,7 +28,7 @@ export const LoginPage = () => {
             placeholder={t("loginPage.passwordInputPlaceholder")}
             layout="vertical"
           />
-          <Button>{t("loginPage.button")}</Button>
+          <Button onClick={()=>{login()}}>{t("loginPage.button")}</Button>
         </Form>
       </LayoutContainer>
     </LoginPageWrapped>
