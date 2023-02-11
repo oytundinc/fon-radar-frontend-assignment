@@ -20,7 +20,7 @@ export const LoginPage = () => {
             layout="vertical"
           />
           <InputPassword
-            label={t("loginPage.inputLabel")}
+            label={t("loginPage.passwordInputLabel")}
             placeholder={t("loginPage.passwordInputPlaceholder")}
             layout="vertical"
           />
