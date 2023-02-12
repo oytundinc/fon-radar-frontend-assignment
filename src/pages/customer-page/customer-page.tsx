@@ -1,5 +1,6 @@
 import { Form } from "antd";
 import { useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/button/button";
 //import { useTranslation } from 'react-i18next';
@@ -11,37 +12,38 @@ import { CustomerData } from "../../service/customer/customer.model";
 import CustomerModal from "../../widgets/costumer-modal/customer-modal";
 import { CustomerPageWrapped } from "./customer-page-styles";
 
-const columns = [
-  {
-    title: "Firma Adı",
-    dataIndex: "companyName",
-    key: "companyName",
-  },
-  {
-    title: "Vergi Kimlik No",
-    dataIndex: "taxNumber",
-    key: "taxNumber",
-  },
-  {
-    title: "Vergi Dairesi",
-    dataIndex: "taxOffice",
-    key: "taxOffice",
-  },
-  {
-    title: "Fatura Sayısı",
-    dataIndex: "invoiceCount",
-    key: "invoiceCount",
-  },
-];
-
 export const CustomerPage = () => {
   //const { t } = useTranslation();
   const [data, setData] = useState<CustomerData[]>([]);
   const navigate = useNavigate();
   const { getAllCustomers } = useCustomerApi();
+  const { t } = useTranslation();
   const detail = () => {
     navigate("/detail-page");
   };
+
+  const columns = [
+    {
+      title: t('customerPage.tableFirstColumn'),
+      dataIndex: "companyName",
+      key: "companyName",
+    },
+    {
+      title: t('customerPage.tableSecondColumn'),
+      dataIndex: "taxNumber",
+      key: "taxNumber",
+    },
+    {
+      title: t('customerPage.tableThirdColumn'),
+      dataIndex: "taxOffice",
+      key: "taxOffice",
+    },
+    {
+      title: t('customerPage.tableFourthColumn'),
+      dataIndex: "invoiceCount",
+      key: "invoiceCount",
+    },
+  ];
 
   const fetchData = useCallback(async () => {
     try {
@@ -75,17 +77,19 @@ export const CustomerPage = () => {
       <LayoutContainer>
         <Form className="customer-page">
           <div className="customer-page-header">
-            <h3 className="customer-page-header-title">Müşterilerim</h3>
+            <h3 className="customer-page-header-title">
+              {t("customerPage.headerTitle")}
+            </h3>
             <Button
               className="costumer-page-new-customer-button"
               onClick={() => {
                 showModal();
               }}
             >
-              Yeni Müşteri
+              {t("customerPage.headerAddNewCustomerButton")}
             </Button>
           </div>
-          <SearchInput />
+          <SearchInput placeholder={t("customerPage.searchInputPlaceholder")} />
           <DataTable
             dataSource={data}
             columns={columns}
@@ -95,7 +99,7 @@ export const CustomerPage = () => {
           />
         </Form>
         <CustomerModal
-          title="Basic Modal"
+          title={t("customerPage.modalTitle")}
           open={isModalOpen}
           onOK={handleOk}
           onCancel={handleCancel}

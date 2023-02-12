@@ -1,5 +1,6 @@
 import { Col, Row } from "antd";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "../../components/button/button";
 import CustomerModal from "../costumer-modal/customer-modal";
 import DetailLeftPanel from "../detail-left-panel/detail-left-panel";
@@ -8,6 +9,7 @@ import { DetailFormStyled } from "./detail-form.styles";
 
 const DetailForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useTranslation();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -25,7 +27,9 @@ const DetailForm = () => {
     <DetailFormStyled>
       <Row className="detail-form-header">
         <Col md={18}>
-          <h1 className="detail-form-header-title">Müşteri</h1>
+          <h1 className="detail-form-header-title">
+            {t("detailForm.headerTitle")}
+          </h1>
         </Col>
 
         <Col md={6}>
@@ -36,9 +40,11 @@ const DetailForm = () => {
               }}
               className="detail-form-edit-button"
             >
-              Düzenle
+              {t("detailForm.headerEditButtonText")}
             </Button>
-            <Button className="detail-form-delete-button">Sil</Button>
+            <Button className="detail-form-delete-button">
+              {t("detailForm.headerDeleteButtonText")}
+            </Button>
           </div>
         </Col>
       </Row>
@@ -50,7 +56,12 @@ const DetailForm = () => {
         <Col md={12}>
           <DetailRightPanel />
         </Col>
-        <CustomerModal title="Basic Modal" open={isModalOpen} onOK={handleOk} onCancel={handleCancel}/>
+        <CustomerModal
+          title="Basic Modal"
+          open={isModalOpen}
+          onOK={handleOk}
+          onCancel={handleCancel}
+        />
       </Row>
     </DetailFormStyled>
   );

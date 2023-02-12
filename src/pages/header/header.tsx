@@ -7,7 +7,7 @@ export const Header = () => {
       <div className="logo-container">
         <img
           src="https://www.fonradar.com/wp-content/uploads/2020/05/logo-2x.png"
-          alt="Logo"
+          alt="Fon-Radar-Logo"
           className="header-logo"
         />
       </div>

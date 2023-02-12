@@ -6,5 +6,53 @@
         "passwordInputPlaceholder": "סיסמה",
         "passwordInputLabel": "סיסמה",
         "button": "התחברות"
+    },
+    "detailRightPanel": {
+        "firstTitle": "Temel Bilgiler Mecburi",
+        "secondTitle": "Ticari Sicil Gazatesi Bilgileri",
+        "thirdTitle": "Teminat Bilgileri",
+        "fourthTitle": "Alacak Sigortası Bilgileri",
+        "fifthTitle": "Findeks Bilgileri",
+        "sixthTitle": "Mali Tablolar",
+        "seventhTitle": "Legal Evraklar",
+        "eighthTitle": "Çalışma Koşulları"
+    },
+    "detailLeftPanel": {
+        "firstDetailInformationTitle": "Ticaret Ünvanı:",
+        "firstDetailInformationText": "Deniz Factoring Anonim Şirketi",
+        "secondDetailInformationTitle": "Faaliyet Alanı: ",
+        "secondDetailInformationText": "Teminat: ",
+        "thirdDetailInformationTitle": "Demir Çelik",
+        "thirdDetailInformationText": "2910141668",
+        "fourthDetailInformationTitle": "Sermaye: ",
+        "fourthDetailInformationText": "123232,00 TL",
+        "firstDetailFinanceTitle": "Kar Bilgileri",
+        "secondDetailFinanceTitle": "Çalışma Koşulları"
+    },
+    "detailForm": {
+        "headerTitle": "Müşteri",
+        "headerEditButtonText": "Düzenle",
+        "headerDeleteButtonText": "Sil"
+    },
+    "customerModal": {
+        "modalTitle": "Müşteri Bilgileri",
+        "firstInputLabel": "Firma Adı",
+        "firstInputPlaceholder": "Firma Adı Giriniz.",
+        "secondInputLabel": "Vergi Kimlik No",
+        "secondInputPlaceholder": "Vergi Kimlik No Giriniz.",
+        "thirdInputLabel": "Vergi Dairesi",
+        "thirdInputPlaceholder": "Vergi Dairesi Giriniz.",
+        "fourtInputLabel": "Fatura Sayısı",
+        "fourtInputPlaceholder": "Fatura Sayısı Giriniz."
+    },
+    "customerPage": {
+        "headerTitle": "Müşterilerim",
+        "headerAddNewCustomerButton": "Yeni Müşteri",
+        "modalTitle": "Müşteri Bilgileri",
+        "searchInputPlaceholder": "Müşteri Ara",
+        "tableFirstColumn": "Firma Adı",
+        "tableSecondColumn": "Vergi Kimlik No",
+        "tableThirdColumn": "Vergi Dairesi",
+        "tableFourthColumn": "Fatura Sayısı"
     }
 }

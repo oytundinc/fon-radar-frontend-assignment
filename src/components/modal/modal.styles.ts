@@ -8,6 +8,10 @@ export const ModalStyled = styled(AntModal)<ModalProps>`
         .ant-form-item-label {
             padding-left: 4px;
         }
+
+        .ant-form-item {
+          margin-bottom: 4px;
+        }
     }
   }
 `;

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Input from "../../components/input/input";
 import { Modal, ModalProps } from "../../components/modal/modal";
 import { CustomerModalStyled } from "./customer-modal.styles";
@@ -5,17 +6,36 @@ import { CustomerModalStyled } from "./customer-modal.styles";
 interface CustomerModalProps extends ModalProps {}
 
 const CustomerModal = ({ title, open, onOK, onCancel }: CustomerModalProps) => {
+  const { t } = useTranslation();
+
   return (
     <CustomerModalStyled>
-      <Modal title="Müşteri Bilgileri" open={open} onOK={onOK} onCancel={onCancel}>
+      <Modal
+        title={t("customerModal.modalTitle")}
+        open={open}
+        onOK={onOK}
+        onCancel={onCancel}
+      >
         <Input
-          label="Firma Adı"
-          placeholder="Firma Adı Giriniz."
+          label={t("customerModal.firstInputLabel")}
+          placeholder={t("customerModal.firstInputPlaceholder")}
           layout={"horizontal"}
         />
-        <Input label="Vergi Kimlik No" placeholder="Vergi Kimlik No Giriniz." layout={"horizontal"} />
-        <Input label="Vergi Dairesi" placeholder="Vergi Dairesi Giriniz." layout={"horizontal"} />
-        <Input label="Fatura Sayısı" placeholder="Fatura Sayısı Giriniz." layout={"horizontal"} />
+        <Input
+          label={t("customerModal.secondInputLabel")}
+          placeholder={t("customerModal.secondInputPlaceholder")}
+          layout={"horizontal"}
+        />
+        <Input
+          label={t("customerModal.thirdInputLabel")}
+          placeholder={t("customerModal.thirdInputPlaceholder")}
+          layout={"horizontal"}
+        />
+        <Input
+          label={t("customerModal.fourtInputLabel")}
+          placeholder={t("customerModal.fourtInputPlaceholder")}
+          layout={"horizontal"}
+        />
       </Modal>
     </CustomerModalStyled>
   );
