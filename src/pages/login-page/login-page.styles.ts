@@ -22,6 +22,9 @@ export const LoginPageWrapped = styled.div`
       }
 
       .input-container {
+        .ant-form-item-label {
+          padding-left: 4px;
+        }
       }
 
       .input-password-container {
