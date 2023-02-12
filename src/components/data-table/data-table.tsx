@@ -1,14 +1,14 @@
 import { Table } from "antd";
+import { CustomerData } from "../../service/customer/customer.model";
 import { DataTableStyled } from "./data-table.styles";
 
 type DataTableProps = {
   columns?: object[];
-  dataSource?: object[];
-  onClick?: () => void;
-  pagination?: boolean;
+  dataSource?: CustomerData[];
+  handleClick: (id: string) => void;
 };
 
-export const DataTable = ({ dataSource, columns, onClick }: DataTableProps) => {
+export const DataTable = ({ dataSource, columns, handleClick }: DataTableProps) => {
   return (
     <DataTableStyled>
       <Table
@@ -16,7 +16,9 @@ export const DataTable = ({ dataSource, columns, onClick }: DataTableProps) => {
         columns={columns}
         onRow={(row) => {
           return {
-            onClick: onClick,
+            onClick: (event) => {
+              handleClick(row.id);
+            },
           };
         }}
         scroll={{ y: 400 }}

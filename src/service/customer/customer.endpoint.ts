@@ -1,5 +1,9 @@
 const customerApiEndpoints = {
-    getAllCustomers: '/customers',
+    getCustomers: '/customers',
+};
+
+export const getCustomerByIdPath = (customerId: string) => {
+    return customerApiEndpoints.getCustomers + `/${customerId}`
 };
 
 export default customerApiEndpoints;

@@ -1,15 +1,34 @@
 import { Col, Row } from "antd";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/button/button";
+import useCustomerApi from "../../service/customer/customer.api";
+import { CustomerData } from "../../service/customer/customer.model";
 import CustomerModal from "../costumer-modal/customer-modal";
 import DetailLeftPanel from "../detail-left-panel/detail-left-panel";
 import DetailRightPanel from "../detail-right-panel/detail-right-panel";
 import { DetailFormStyled } from "./detail-form.styles";
 
-const DetailForm = () => {
+interface DetailFormProps {
+  id: string;
+}
+
+const DetailForm = ({ id }: DetailFormProps) => {
+  const [data, setData] = useState<CustomerData>();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { getCustomerById } = useCustomerApi();
   const { t } = useTranslation();
+
+  const fetchData = useCallback(async () => {
+    try {
+      const response = await getCustomerById(id);
+      setData(response.data);
+    } catch (error) {}
+  }, [id, getCustomerById]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -51,7 +70,7 @@ const DetailForm = () => {
 
       <Row>
         <Col md={12}>
-          <DetailLeftPanel />
+          <DetailLeftPanel data={data} />
         </Col>
         <Col md={12}>
           <DetailRightPanel />
@@ -61,6 +80,7 @@ const DetailForm = () => {
           open={isModalOpen}
           onOK={handleOk}
           onCancel={handleCancel}
+          dataSource={data}
         />
       </Row>
     </DetailFormStyled>

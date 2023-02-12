@@ -2,7 +2,7 @@ import { DetailInformationStyled } from "./detail-information.styles";
 
 export interface DetailInformationProps {
   title: string;
-  text: string;
+  text: string | number;
 }
 
 export const DetailInformation = ({ title, text }: DetailInformationProps) => {

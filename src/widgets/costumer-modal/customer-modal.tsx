@@ -1,11 +1,14 @@
 import { useTranslation } from "react-i18next";
 import Input from "../../components/input/input";
 import { Modal, ModalProps } from "../../components/modal/modal";
+import { CustomerData } from "../../service/customer/customer.model";
 import { CustomerModalStyled } from "./customer-modal.styles";
 
-interface CustomerModalProps extends ModalProps {}
+interface CustomerModalProps extends ModalProps {
+  dataSource?: CustomerData;
+}
 
-const CustomerModal = ({ title, open, onOK, onCancel }: CustomerModalProps) => {
+const CustomerModal = ({ open, onOK, onCancel, dataSource }: CustomerModalProps) => {
   const { t } = useTranslation();
 
   return (
@@ -17,24 +20,31 @@ const CustomerModal = ({ title, open, onOK, onCancel }: CustomerModalProps) => {
         onCancel={onCancel}
       >
         <Input
-          label={t("customerModal.firstInputLabel")}
-          placeholder={t("customerModal.firstInputPlaceholder")}
+          label={t("customerModal.companyNameInputLabel")}
+          placeholder={t("customerModal.companyNameInputPlaceholder")}
           layout={"horizontal"}
+          defaultValue={dataSource?.companyName}
         />
         <Input
-          label={t("customerModal.secondInputLabel")}
-          placeholder={t("customerModal.secondInputPlaceholder")}
+          label={t("customerModal.taxOfficeInputLabel")}
+          placeholder={t("customerModal.taxOfficeInputPlaceholder")}
           layout={"horizontal"}
+          defaultValue={dataSource?.taxOffice}
+          type="string"
         />
         <Input
-          label={t("customerModal.thirdInputLabel")}
-          placeholder={t("customerModal.thirdInputPlaceholder")}
+          label={t("customerModal.taxNumberInputLabel")}
+          placeholder={t("customerModal.taxNumberInputPlaceholder")}
           layout={"horizontal"}
+          defaultValue={dataSource?.taxNumber}
+          type="number"
         />
         <Input
-          label={t("customerModal.fourtInputLabel")}
-          placeholder={t("customerModal.fourtInputPlaceholder")}
+          label={t("customerModal.invoiceCountInputLabel")}
+          placeholder={t("customerModal.invoiceCountInputPlaceholder")}
           layout={"horizontal"}
+          defaultValue={dataSource?.invoiceCount}
+          type="number"
         />
       </Modal>
     </CustomerModalStyled>

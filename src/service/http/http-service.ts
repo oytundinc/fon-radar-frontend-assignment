@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-const baseURL: string = "https://6215eeb77428a1d2a354c664.mockapi.io";
+const baseURL: string = "https://6215eeb77428a1d2a354c664.mockapi.io/api/v1";
 
 const axiosConfig: AxiosRequestConfig = {
     baseURL: baseURL

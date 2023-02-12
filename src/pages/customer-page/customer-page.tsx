@@ -18,8 +18,8 @@ export const CustomerPage = () => {
   const navigate = useNavigate();
   const { getAllCustomers } = useCustomerApi();
   const { t } = useTranslation();
-  const detail = () => {
-    navigate("/detail-page");
+  const navigateToDetails = (customerId: string) => {
+    navigate("/detail-page", {state:{id:customerId}});
   };
 
   const columns = [
@@ -93,8 +93,8 @@ export const CustomerPage = () => {
           <DataTable
             dataSource={data}
             columns={columns}
-            onClick={() => {
-              detail();
+            handleClick={(id: string) => {
+              navigateToDetails(id);
             }}
           />
         </Form>

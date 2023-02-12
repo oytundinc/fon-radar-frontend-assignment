@@ -18,14 +18,10 @@
         "eighthTitle": "Çalışma Koşulları"
     },
     "detailLeftPanel": {
-        "firstDetailInformationTitle": "Ticaret Ünvanı:",
-        "firstDetailInformationText": "Deniz Factoring Anonim Şirketi",
-        "secondDetailInformationTitle": "Faaliyet Alanı: ",
-        "secondDetailInformationText": "Teminat: ",
-        "thirdDetailInformationTitle": "Demir Çelik",
-        "thirdDetailInformationText": "2910141668",
-        "fourthDetailInformationTitle": "Sermaye: ",
-        "fourthDetailInformationText": "123232,00 TL",
+        "detailInformationCompanyNameTitle": "Ticaret Ünvanı: ",
+        "detailInformationTaxOfficeTitle": "Vergi Dairesi: ",
+        "detailInformationTaxNumberTitle": "Vergi Kimlik No: ",
+        "detailInformationInvoiceCountTitle": "Fatura Sayısı ",
         "firstDetailFinanceTitle": "Kar Bilgileri",
         "secondDetailFinanceTitle": "Çalışma Koşulları"
     },
@@ -36,14 +32,14 @@
     },
     "customerModal": {
         "modalTitle": "Müşteri Bilgileri",
-        "firstInputLabel": "Firma Adı",
-        "firstInputPlaceholder": "Firma Adı Giriniz.",
-        "secondInputLabel": "Vergi Kimlik No",
-        "secondInputPlaceholder": "Vergi Kimlik No Giriniz.",
-        "thirdInputLabel": "Vergi Dairesi",
-        "thirdInputPlaceholder": "Vergi Dairesi Giriniz.",
-        "fourtInputLabel": "Fatura Sayısı",
-        "fourtInputPlaceholder": "Fatura Sayısı Giriniz."
+        "companyNameInputLabel": "Firma Adı",
+        "companyNameInputPlaceholder": "Firma Adı Giriniz.",
+        "taxOfficeInputLabel": "Vergi Dairesi",
+        "taxOfficeInputPlaceholder": "Vergi Dairesini Giriniz.",
+        "taxNumberInputLabel": "Vergi Kimlik No",
+        "taxNumberInputPlaceholder": "Vergi Kimlik No Giriniz.",
+        "invoiceCountInputLabel": "Fatura Sayısı",
+        "invoiceCountInputPlaceholder": "Fatura Sayısı Giriniz."
     },
     "customerPage": {
         "headerTitle": "Müşterilerim",
