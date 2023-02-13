@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 export const LoginPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate()
-  const login = () => {navigate('/customer-page')}
+  const navigateToCustomer = () => {navigate('/customer-page')}
 
   return (
     <LoginPageWrapped className="login-page-wrapped">
@@ -28,7 +28,7 @@ export const LoginPage = () => {
             placeholder={t("loginPage.passwordInputPlaceholder")}
             layout="vertical"
           />
-          <Button onClick={()=>{login()}}>{t("loginPage.button")}</Button>
+          <Button onClick={()=>{navigateToCustomer()}}>{t("loginPage.button")}</Button>
         </Form>
       </LayoutContainer>
     </LoginPageWrapped>

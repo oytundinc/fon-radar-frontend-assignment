@@ -21,6 +21,7 @@ export const DetailFormStyled = styled.div`
       display: contents;
       .detail-form-edit-button {
         margin-right: 4px;
+        margin-left: 4px;
         padding: 4px 2px;
 
         max-width: 80px;

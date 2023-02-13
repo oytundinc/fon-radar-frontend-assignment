@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { ModalStyled } from "./modal.styles";
 
-
 export type ModalProps = {
   open?: boolean;
   children?: ReactNode;

@@ -60,17 +60,14 @@ export const CustomerPage = () => {
 
   const showModal = () => {
     setIsModalOpen(true);
-    console.log("açılll");
   };
 
   const handleOk = () => {
     setIsModalOpen(false);
-    console.log("okkkk");
   };
 
   const handleCancel = () => {
     setIsModalOpen(false);
-    console.log("cancellll");
   };
   return (
     <CustomerPageWrapped className="customer-page-wrapped">

@@ -17,6 +17,7 @@ export const DetailCheckStyled = styled.div`
   .detail-check-info-title {
     font-weight: 600;
     padding-left: 6px;
+    padding-right: 6px;
   }
 
   .anticon-check-circle {
@@ -26,5 +27,10 @@ export const DetailCheckStyled = styled.div`
   .anticon-close-circle {
     font-size: 14px;
     color: red;
+  }
+
+  .detail-check-link {
+    font-size: 10px;
+    color: #255a88;
   }
 `;

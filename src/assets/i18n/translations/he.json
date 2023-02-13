@@ -8,51 +8,53 @@
         "button": "התחברות"
     },
     "detailRightPanel": {
-        "firstTitle": "Temel Bilgiler Mecburi",
-        "secondTitle": "Ticari Sicil Gazatesi Bilgileri",
-        "thirdTitle": "Teminat Bilgileri",
-        "fourthTitle": "Alacak Sigortası Bilgileri",
-        "fifthTitle": "Findeks Bilgileri",
-        "sixthTitle": "Mali Tablolar",
-        "seventhTitle": "Legal Evraklar",
-        "eighthTitle": "Çalışma Koşulları"
+        "basicInformationRequired": "מידע בסיסי נדרש",
+        "commercialRegistryGazetteInformation": "מידע על עיתוני הרישום המסחריים",
+        "coverageInformation": "מידע כיסוי",
+        "creditInsuranceInformation": "מידע על ביטוח אשראי",
+        "findeksInformation": "מידע Findeks",
+        "financialStatements": "דוחות כספיים",
+        "legalDocuments": "מסמך חוקי",
+        "workingConditions": "תנאי עבודה",
+        "workingConditionsLink": "הזן מידע"
     },
     "detailLeftPanel": {
-        "firstDetailInformationTitle": "Ticaret Ünvanı:",
-        "firstDetailInformationText": "Deniz Factoring Anonim Şirketi",
-        "secondDetailInformationTitle": "Faaliyet Alanı: ",
-        "secondDetailInformationText": "Teminat: ",
-        "thirdDetailInformationTitle": "Demir Çelik",
-        "thirdDetailInformationText": "2910141668",
-        "fourthDetailInformationTitle": "Sermaye: ",
-        "fourthDetailInformationText": "123232,00 TL",
-        "firstDetailFinanceTitle": "Kar Bilgileri",
-        "secondDetailFinanceTitle": "Çalışma Koşulları"
+        "detailInformationCompanyNameTitle": "שם החברה: ",
+        "detailInformationTaxOfficeTitle": "משרד המס: ",
+        "detailInformationTaxNumberTitle": "מספר מס: ",
+        "detailInformationInvoiceCountTitle": "ספירת חשבוניות: ",
+        "firstDetailFinanceTitle": "מידע על רווחים",
+        "secondDetailFinanceTitle": "תנאי עבודה",
+        "financeDataPaymentPeriodTitle": "תקופת תשלום",
+        "financeDataPaymentPeriodText": "3 חודשים",
+        "financeDataPaymentMethodTitle": "אמצעי תשלום",
+        "financeDataPaymentMethodText": "כסף מזומן",
+        "financeDataLimitTitle": "לְהַגבִּיל"
     },
     "detailForm": {
-        "headerTitle": "Müşteri",
-        "headerEditButtonText": "Düzenle",
-        "headerDeleteButtonText": "Sil"
+        "headerTitle": "צרכן",
+        "headerEditButtonText": "לַעֲרוֹך",
+        "headerDeleteButtonText": "לִמְחוֹק"
     },
     "customerModal": {
-        "modalTitle": "Müşteri Bilgileri",
-        "firstInputLabel": "Firma Adı",
-        "firstInputPlaceholder": "Firma Adı Giriniz.",
-        "secondInputLabel": "Vergi Kimlik No",
-        "secondInputPlaceholder": "Vergi Kimlik No Giriniz.",
-        "thirdInputLabel": "Vergi Dairesi",
-        "thirdInputPlaceholder": "Vergi Dairesi Giriniz.",
-        "fourtInputLabel": "Fatura Sayısı",
-        "fourtInputPlaceholder": "Fatura Sayısı Giriniz."
+        "modalTitle": "מידע ללקוחות",
+        "companyNameInputLabel": "שם החברה",
+        "companyNameInputPlaceholder": "הזן את שם החברה.",
+        "taxOfficeInputLabel": "משרד המס",
+        "taxOfficeInputPlaceholder": "היכנס למשרד המס.",
+        "taxNumberInputLabel": "מספר מס",
+        "taxNumberInputPlaceholder": "הזן מספר מס.",
+        "invoiceCountInputLabel": "ספירת חשבוניות",
+        "invoiceCountInputPlaceholder": "הזן את ספירת החשבוניות."
     },
     "customerPage": {
-        "headerTitle": "Müşterilerim",
-        "headerAddNewCustomerButton": "Yeni Müşteri",
-        "modalTitle": "Müşteri Bilgileri",
-        "searchInputPlaceholder": "Müşteri Ara",
-        "tableFirstColumn": "Firma Adı",
-        "tableSecondColumn": "Vergi Kimlik No",
-        "tableThirdColumn": "Vergi Dairesi",
-        "tableFourthColumn": "Fatura Sayısı"
+        "headerTitle": "לקוחות",
+        "headerAddNewCustomerButton": "הוסף לקוח חדש",
+        "modalTitle": "מידע ללקוחות",
+        "searchInputPlaceholder": "חפש לקוח",
+        "tableFirstColumn": "שם החברה",
+        "tableSecondColumn": "מספר מס",
+        "tableThirdColumn": "משרד המס",
+        "tableFourthColumn": "ספירת חשבוניות"
     }
 }

@@ -31,17 +31,17 @@ const DetailLeftPanel = ({data}: DetailLeftPanelProps) => {
   const secondFinanceData = [
     {
       id: "1",
-      title: "Vade",
-      text: "3 ay",
+      title: t("detailLeftPanel.financeDataPaymentPeriodTitle"),
+      text: t("detailLeftPanel.financeDataPaymentPeriodText"),
     },
     {
       id: "2",
-      title: "Ödeme Şekli",
-      text: "Nakit",
+      title: t("detailLeftPanel.financeDataPaymentMethodTitle"),
+      text: t("detailLeftPanel.financeDataPaymentMethodText"),
     },
     {
       id: "3",
-      title: "Limit",
+      title: t("detailLeftPanel.financeDataLimitTitle"),
       text: "800.000.00 ₺",
     },
   ];

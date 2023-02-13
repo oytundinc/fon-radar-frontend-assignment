@@ -1,19 +1,46 @@
 import { useTranslation } from "react-i18next";
 import DetailCheck from "../../components/detail-check/detail-check";
+import { RightOutlined } from "@ant-design/icons";
 
 const DetailRightPanel = () => {
   const { t } = useTranslation();
 
   return (
     <>
-      <DetailCheck title={t("detailRightPanel.firstTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.secondTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.thirdTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.fourthTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.fifthTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.sixthTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.seventhTitle")} check={true} />
-      <DetailCheck title={t("detailRightPanel.eighthTitle")} check={false} />
+      <DetailCheck
+        title={t("detailRightPanel.basicInformationRequired")}
+        check={true}
+      />
+      <DetailCheck
+        title={t("detailRightPanel.commercialRegistryGazetteInformation")}
+        check={true}
+      />
+      <DetailCheck
+        title={t("detailRightPanel.coverageInformation")}
+        check={true}
+      />
+      <DetailCheck
+        title={t("detailRightPanel.creditInsuranceInformation")}
+        check={true}
+      />
+      <DetailCheck
+        title={t("detailRightPanel.findeksInformation")}
+        check={true}
+      />
+      <DetailCheck
+        title={t("detailRightPanel.financialStatements")}
+        check={true}
+      />
+      <DetailCheck title={t("detailRightPanel.legalDocuments")} check={true} />
+      <DetailCheck
+        title={t("detailRightPanel.workingConditions")}
+        check={false}
+      >
+        <a href="https://www.fonradar.com/" className="detail-check-link">
+          {t("detailRightPanel.workingConditionsLink")}
+          <RightOutlined />
+        </a>
+      </DetailCheck>
     </>
   );
 };

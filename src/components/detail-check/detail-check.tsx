@@ -8,16 +8,17 @@ import {
 type DetailCheckProps = {
   title: string;
   check: boolean;
+  children?: JSX.Element;
 };
 
-function DetailCheck({ title, check }: DetailCheckProps) {
+function DetailCheck({ title, check, children }: DetailCheckProps) {
   return (
     <DetailCheckStyled>
       <div>
         <HomeOutlined />
         <span className="detail-check-info-title">{title}</span>
       </div>
-      {check ? <CheckCircleFilled /> : <CloseCircleFilled />}
+      {children? children : (check ? <CheckCircleFilled /> : <CloseCircleFilled />)}
     </DetailCheckStyled>
   );
 }

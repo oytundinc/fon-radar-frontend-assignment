@@ -14,14 +14,15 @@ export const DetailFinanceStyled = styled.div`
   .detail-finance-data {
     display: flex;
     justify-content: space-between;
-    max-width: 280px;
+    max-width: 300px;
     padding: 6px;
 
     background-color: #f4f4f4;
     border-radius: 4px;
 
-    .detail-information-title {
-      font-size: 10px;
+    .detail-information-title,
+    .detail-information-text {
+      font-size: 11px;
     }
   }
 `;

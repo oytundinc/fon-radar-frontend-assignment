@@ -8,14 +8,15 @@
         "button": "Giriş Yap"
     },
     "detailRightPanel": {
-        "firstTitle": "Temel Bilgiler Mecburi",
-        "secondTitle": "Ticari Sicil Gazatesi Bilgileri",
-        "thirdTitle": "Teminat Bilgileri",
-        "fourthTitle": "Alacak Sigortası Bilgileri",
-        "fifthTitle": "Findeks Bilgileri",
-        "sixthTitle": "Mali Tablolar",
-        "seventhTitle": "Legal Evraklar",
-        "eighthTitle": "Çalışma Koşulları"
+        "basicInformationRequired": "Temel Bilgiler Mecburi",
+        "commercialRegistryGazetteInformation": "Ticari Sicil Gazatesi Bilgileri",
+        "coverageInformation": "Teminat Bilgileri",
+        "creditInsuranceInformation": "Alacak Sigortası Bilgileri",
+        "findeksInformation": "Findeks Bilgileri",
+        "financialStatements": "Mali Tablolar",
+        "legalDocuments": "Legal Evraklar",
+        "workingConditions": "Çalışma Koşulları",
+        "workingConditionsLink": "Bilgileri Giriniz"
     },
     "detailLeftPanel": {
         "detailInformationCompanyNameTitle": "Ticaret Ünvanı: ",
@@ -23,7 +24,12 @@
         "detailInformationTaxNumberTitle": "Vergi Kimlik No: ",
         "detailInformationInvoiceCountTitle": "Fatura Sayısı ",
         "firstDetailFinanceTitle": "Kar Bilgileri",
-        "secondDetailFinanceTitle": "Çalışma Koşulları"
+        "secondDetailFinanceTitle": "Çalışma Koşulları",
+        "financeDataPaymentPeriodTitle": "Vade",
+        "financeDataPaymentPeriodText": "3 ay",
+        "financeDataPaymentMethodTitle": "Ödeme Şekli",
+        "financeDataPaymentMethodText": "Nakit",
+        "financeDataLimitTitle": "Limit"
     },
     "detailForm": {
         "headerTitle": "Müşteri",

@@ -8,51 +8,53 @@
         "button": "登录"
     },
     "detailRightPanel": {
-        "firstTitle": "Temel Bilgiler Mecburi",
-        "secondTitle": "Ticari Sicil Gazatesi Bilgileri",
-        "thirdTitle": "Teminat Bilgileri",
-        "fourthTitle": "Alacak Sigortası Bilgileri",
-        "fifthTitle": "Findeks Bilgileri",
-        "sixthTitle": "Mali Tablolar",
-        "seventhTitle": "Legal Evraklar",
-        "eighthTitle": "Çalışma Koşulları"
+        "basicInformationRequired": "所需基本资料",
+        "commercialRegistryGazetteInformation": "商业注册公报信息",
+        "coverageInformation": "覆盖信息",
+        "creditInsuranceInformation": "信保资讯",
+        "findeksInformation": "Findeks信息",
+        "financialStatements": "财务报表",
+        "legalDocuments": "法律文件",
+        "workingConditions": "工作环境",
+        "workingConditionsLink": "输入信息"
     },
     "detailLeftPanel": {
-        "firstDetailInformationTitle": "Ticaret Ünvanı:",
-        "firstDetailInformationText": "Deniz Factoring Anonim Şirketi",
-        "secondDetailInformationTitle": "Faaliyet Alanı: ",
-        "secondDetailInformationText": "Teminat: ",
-        "thirdDetailInformationTitle": "Demir Çelik",
-        "thirdDetailInformationText": "2910141668",
-        "fourthDetailInformationTitle": "Sermaye: ",
-        "fourthDetailInformationText": "123232,00 TL",
-        "firstDetailFinanceTitle": "Kar Bilgileri",
-        "secondDetailFinanceTitle": "Çalışma Koşulları"
+        "detailInformationCompanyNameTitle": "公司名称: ",
+        "detailInformationTaxOfficeTitle": "税务局: ",
+        "detailInformationTaxNumberTitle": "税号: ",
+        "detailInformationInvoiceCountTitle": "发票数量: ",
+        "firstDetailFinanceTitle": "盈利资讯",
+        "secondDetailFinanceTitle": "工作环境",
+        "financeDataPaymentPeriodTitle": "到期",
+        "financeDataPaymentPeriodText": "3个月",
+        "financeDataPaymentMethodTitle": "付款方式",
+        "financeDataPaymentMethodText": "现金",
+        "financeDataLimitTitle": "限制"
     },
     "detailForm": {
-        "headerTitle": "Müşteri",
-        "headerEditButtonText": "Düzenle",
-        "headerDeleteButtonText": "Sil"
+        "headerTitle": "顾客",
+        "headerEditButtonText": "编辑",
+        "headerDeleteButtonText": "删除"
     },
     "customerModal": {
-        "modalTitle": "Müşteri Bilgileri",
-        "firstInputLabel": "Firma Adı",
-        "firstInputPlaceholder": "Firma Adı Giriniz.",
-        "secondInputLabel": "Vergi Kimlik No",
-        "secondInputPlaceholder": "Vergi Kimlik No Giriniz.",
-        "thirdInputLabel": "Vergi Dairesi",
-        "thirdInputPlaceholder": "Vergi Dairesi Giriniz.",
-        "fourtInputLabel": "Fatura Sayısı",
-        "fourtInputPlaceholder": "Fatura Sayısı Giriniz."
+        "modalTitle": "客户信息",
+        "companyNameInputLabel": "公司名称",
+        "companyNameInputPlaceholder": "输入公司名称.",
+        "taxOfficeInputLabel": "税务局",
+        "taxOfficeInputPlaceholder": "进入税务局.",
+        "taxNumberInputLabel": "税号",
+        "taxNumberInputPlaceholder": "输入税号.",
+        "invoiceCountInputLabel": "发票数量",
+        "invoiceCountInputPlaceholder": "输入发票计数。"
     },
     "customerPage": {
-        "headerTitle": "Müşterilerim",
-        "headerAddNewCustomerButton": "Yeni Müşteri",
-        "modalTitle": "Müşteri Bilgileri",
-        "searchInputPlaceholder": "Müşteri Ara",
-        "tableFirstColumn": "Firma Adı",
-        "tableSecondColumn": "Vergi Kimlik No",
-        "tableThirdColumn": "Vergi Dairesi",
-        "tableFourthColumn": "Fatura Sayısı"
+        "headerTitle": "顾客",
+        "headerAddNewCustomerButton": "添加新客户",
+        "modalTitle": "客户信息",
+        "searchInputPlaceholder": "搜寻客户",
+        "tableFirstColumn": "公司名称",
+        "tableSecondColumn": "税号",
+        "tableThirdColumn": "税务局",
+        "tableFourthColumn": "发票数量"
     }
 }

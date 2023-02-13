@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import Input from "../../components/input/input";
 import { Modal, ModalProps } from "../../components/modal/modal";
 import { CustomerData } from "../../service/customer/customer.model";
-import { CustomerModalStyled } from "./customer-modal.styles";
 
 interface CustomerModalProps extends ModalProps {
   dataSource?: CustomerData;
@@ -12,7 +11,6 @@ const CustomerModal = ({ open, onOK, onCancel, dataSource }: CustomerModalProps)
   const { t } = useTranslation();
 
   return (
-    <CustomerModalStyled>
       <Modal
         title={t("customerModal.modalTitle")}
         open={open}
@@ -47,7 +45,6 @@ const CustomerModal = ({ open, onOK, onCancel, dataSource }: CustomerModalProps)
           type="number"
         />
       </Modal>
-    </CustomerModalStyled>
   );
 };
 

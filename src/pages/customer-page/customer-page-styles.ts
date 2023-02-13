@@ -23,7 +23,8 @@ export const CustomerPageWrapped = styled.div`
         }
 
         .costumer-page-new-customer-button {
-          max-width: 100px;
+          width: auto;
+          padding: 0px 4px;
         }
       }
     }

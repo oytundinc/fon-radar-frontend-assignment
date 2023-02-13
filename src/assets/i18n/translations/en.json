@@ -8,51 +8,53 @@
         "button": "Login"
     },
     "detailRightPanel": {
-        "firstTitle": "Temel Bilgiler Mecburi",
-        "secondTitle": "Ticari Sicil Gazatesi Bilgileri",
-        "thirdTitle": "Teminat Bilgileri",
-        "fourthTitle": "Alacak Sigortası Bilgileri",
-        "fifthTitle": "Findeks Bilgileri",
-        "sixthTitle": "Mali Tablolar",
-        "seventhTitle": "Legal Evraklar",
-        "eighthTitle": "Çalışma Koşulları"
+        "basicInformationRequired": "Basic Information Required",
+        "commercialRegistryGazetteInformation": "Commercial Registry Gazette Information",
+        "coverageInformation": "Coverage Information",
+        "creditInsuranceInformation": "Credit Insurance Information",
+        "findeksInformation": "Findeks Information",
+        "financialStatements": "Financial Statements",
+        "legalDocuments": "Legal Document",
+        "workingConditions": "Working Conditions",
+        "workingConditionsLink": "Enter Information"
     },
     "detailLeftPanel": {
-        "firstDetailInformationTitle": "Ticaret Ünvanı:",
-        "firstDetailInformationText": "Deniz Factoring Anonim Şirketi",
-        "secondDetailInformationTitle": "Faaliyet Alanı: ",
-        "secondDetailInformationText": "Teminat: ",
-        "thirdDetailInformationTitle": "Demir Çelik",
-        "thirdDetailInformationText": "2910141668",
-        "fourthDetailInformationTitle": "Sermaye: ",
-        "fourthDetailInformationText": "123232,00 TL",
-        "firstDetailFinanceTitle": "Kar Bilgileri",
-        "secondDetailFinanceTitle": "Çalışma Koşulları"
+        "detailInformationCompanyNameTitle": "Company Name: ",
+        "detailInformationTaxOfficeTitle": "Tax Office: ",
+        "detailInformationTaxNumberTitle": "Tax Number: ",
+        "detailInformationInvoiceCountTitle": "Invoice Count: ",
+        "firstDetailFinanceTitle": "Profit Information",
+        "secondDetailFinanceTitle": "Working Conditions",
+        "financeDataPaymentPeriodTitle": "Payment Period",
+        "financeDataPaymentPeriodText": "3 mounth",
+        "financeDataPaymentMethodTitle": "Payment Method",
+        "financeDataPaymentMethodText": "Cash",
+        "financeDataLimitTitle": "Limit"
     },
     "detailForm": {
-        "headerTitle": "Müşteri",
-        "headerEditButtonText": "Düzenle",
-        "headerDeleteButtonText": "Sil"
+        "headerTitle": "Customer",
+        "headerEditButtonText": "Edit",
+        "headerDeleteButtonText": "Delete"
     },
     "customerModal": {
-        "modalTitle": "Müşteri Bilgileri",
-        "firstInputLabel": "Firma Adı",
-        "firstInputPlaceholder": "Firma Adı Giriniz.",
-        "secondInputLabel": "Vergi Kimlik No",
-        "secondInputPlaceholder": "Vergi Kimlik No Giriniz.",
-        "thirdInputLabel": "Vergi Dairesi",
-        "thirdInputPlaceholder": "Vergi Dairesi Giriniz.",
-        "fourtInputLabel": "Fatura Sayısı",
-        "fourtInputPlaceholder": "Fatura Sayısı Giriniz."
+        "modalTitle": "Customer Information",
+        "companyNameInputLabel": "Company Name",
+        "companyNameInputPlaceholder": "Enter Company Name.",
+        "taxOfficeInputLabel": "Tax Office",
+        "taxOfficeInputPlaceholder": "Enter Tax Office.",
+        "taxNumberInputLabel": "Tax Number",
+        "taxNumberInputPlaceholder": "Enter Tax Number.",
+        "invoiceCountInputLabel": "Invoice Count",
+        "invoiceCountInputPlaceholder": "Enter Invoice Count."
     },
     "customerPage": {
-        "headerTitle": "Müşterilerim",
-        "headerAddNewCustomerButton": "Yeni Müşteri",
-        "modalTitle": "Müşteri Bilgileri",
-        "searchInputPlaceholder": "Müşteri Ara",
-        "tableFirstColumn": "Firma Adı",
-        "tableSecondColumn": "Vergi Kimlik No",
-        "tableThirdColumn": "Vergi Dairesi",
-        "tableFourthColumn": "Fatura Sayısı"
+        "headerTitle": "Customers",
+        "headerAddNewCustomerButton": "Add New Customer",
+        "modalTitle": "Customer Information",
+        "searchInputPlaceholder": "Search Customer",
+        "tableFirstColumn": "Company Name",
+        "tableSecondColumn": "Tax Number",
+        "tableThirdColumn": "Tax Office",
+        "tableFourthColumn": "Invoice Count"
     }
 }
