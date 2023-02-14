@@ -1,11 +1,11 @@
 {
-    "loginPage": {
-        "header": "用户登录",
-        "inputPlaceholder": "电子邮件地址",
-        "inputLabel": "电子邮件", 
+    "form": {
+        "title": "用户登录",
+        "emailInputPlaceholder": "电子邮件地址",
+        "emailInputLabel": "电子邮件", 
         "passwordInputPlaceholder": "密码",
         "passwordInputLabel": "密码",
-        "button": "登录"
+        "loginButtonText": "登录"
     },
     "detailRightPanel": {
         "basicInformationRequired": "所需基本资料",
@@ -23,8 +23,8 @@
         "detailInformationTaxOfficeTitle": "税务局: ",
         "detailInformationTaxNumberTitle": "税号: ",
         "detailInformationInvoiceCountTitle": "发票数量: ",
-        "firstDetailFinanceTitle": "盈利资讯",
-        "secondDetailFinanceTitle": "工作环境",
+        "profitInformationTitle": "盈利资讯",
+        "workingConditionsTitle": "工作环境",
         "financeDataPaymentPeriodTitle": "到期",
         "financeDataPaymentPeriodText": "3个月",
         "financeDataPaymentMethodTitle": "付款方式",
@@ -56,5 +56,8 @@
         "tableSecondColumn": "税号",
         "tableThirdColumn": "税务局",
         "tableFourthColumn": "发票数量"
+    },
+    "notification": {
+        "loginErrorNotification": "邮箱或密码不正确"
     }
 }

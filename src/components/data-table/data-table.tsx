@@ -14,6 +14,7 @@ export const DataTable = ({ dataSource, columns, handleClick }: DataTableProps) 
       <Table
         dataSource={dataSource}
         columns={columns}
+        rowKey={"id"}
         onRow={(row) => {
           return {
             onClick: (event) => {

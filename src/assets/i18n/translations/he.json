@@ -1,11 +1,11 @@
 {
-    "loginPage": {
-        "header": "כניסת משתמש",
-        "inputPlaceholder": "כתובת דוא",
-        "inputLabel": "אימייל", 
+    "form": {
+        "title": "כניסת משתמש",
+        "emailInputPlaceholder": "כתובת דוא",
+        "emailInputLabel": "אימייל", 
         "passwordInputPlaceholder": "סיסמה",
         "passwordInputLabel": "סיסמה",
-        "button": "התחברות"
+        "loginButtonText": "התחברות"
     },
     "detailRightPanel": {
         "basicInformationRequired": "מידע בסיסי נדרש",
@@ -23,8 +23,8 @@
         "detailInformationTaxOfficeTitle": "משרד המס: ",
         "detailInformationTaxNumberTitle": "מספר מס: ",
         "detailInformationInvoiceCountTitle": "ספירת חשבוניות: ",
-        "firstDetailFinanceTitle": "מידע על רווחים",
-        "secondDetailFinanceTitle": "תנאי עבודה",
+        "profitInformationTitle": "מידע על רווחים",
+        "workingConditionsTitle": "תנאי עבודה",
         "financeDataPaymentPeriodTitle": "תקופת תשלום",
         "financeDataPaymentPeriodText": "3 חודשים",
         "financeDataPaymentMethodTitle": "אמצעי תשלום",
@@ -56,5 +56,8 @@
         "tableSecondColumn": "מספר מס",
         "tableThirdColumn": "משרד המס",
         "tableFourthColumn": "ספירת חשבוניות"
+    },
+    "notification": {
+        "loginErrorNotification": "האימייל או הסיסמה אינם נכונים!"
     }
 }

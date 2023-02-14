@@ -13,42 +13,49 @@ import CustomerModal from "../../widgets/costumer-modal/customer-modal";
 import { CustomerPageWrapped } from "./customer-page-styles";
 
 export const CustomerPage = () => {
-  //const { t } = useTranslation();
-  const [data, setData] = useState<CustomerData[]>([]);
   const navigate = useNavigate();
   const { getAllCustomers } = useCustomerApi();
   const { t } = useTranslation();
+
+  const [customers, setCustomers] = useState<CustomerData[]>([]);
+  const [filteredCustomers, setFilteredCustomers] = useState<CustomerData[]>([]);
+
   const navigateToDetails = (customerId: string) => {
-    navigate("/detail-page", {state:{id:customerId}});
+    navigate("/detail-page", { state: { id: customerId } });
   };
 
   const columns = [
     {
-      title: t('customerPage.tableFirstColumn'),
+      title: t("customerPage.tableFirstColumn"),
       dataIndex: "companyName",
       key: "companyName",
+      sorter: (first: CustomerData, second: CustomerData) => first.companyName.localeCompare(second.companyName),
     },
     {
-      title: t('customerPage.tableSecondColumn'),
+      title: t("customerPage.tableSecondColumn"),
       dataIndex: "taxNumber",
       key: "taxNumber",
+      sorter: (first: CustomerData, second: CustomerData) => first.taxNumber - second.taxNumber,
     },
     {
-      title: t('customerPage.tableThirdColumn'),
+      title: t("customerPage.tableThirdColumn"),
       dataIndex: "taxOffice",
       key: "taxOffice",
+      sorter: (first: CustomerData, second: CustomerData) => first.taxOffice.localeCompare(second.taxOffice),
     },
     {
-      title: t('customerPage.tableFourthColumn'),
+      title: t("customerPage.tableFourthColumn"),
       dataIndex: "invoiceCount",
       key: "invoiceCount",
+      sorter: (first: CustomerData, second: CustomerData) => first.invoiceCount - second.invoiceCount,
     },
   ];
 
   const fetchData = useCallback(async () => {
     try {
       const response = await getAllCustomers();
-      setData(response.data);
+      setCustomers(response.data);
+      setFilteredCustomers(response.data);
     } catch (error) {}
   }, [getAllCustomers]);
 
@@ -69,6 +76,16 @@ export const CustomerPage = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  const filterData = (value: string) => {
+    setFilteredCustomers(customers.filter((customer: CustomerData) => {
+      const loweredCaseValue = value.toLowerCase();
+      return (
+        customer.taxNumber.toString().includes(loweredCaseValue) ||
+        customer.companyName.toLowerCase().includes(loweredCaseValue)
+      );
+    }));
+  };
   return (
     <CustomerPageWrapped className="customer-page-wrapped">
       <LayoutContainer>
@@ -86,9 +103,12 @@ export const CustomerPage = () => {
               {t("customerPage.headerAddNewCustomerButton")}
             </Button>
           </div>
-          <SearchInput placeholder={t("customerPage.searchInputPlaceholder")} />
+          <SearchInput
+            placeholder={t("customerPage.searchInputPlaceholder")}
+            onSearch={filterData}
+          />
           <DataTable
-            dataSource={data}
+            dataSource={filteredCustomers}
             columns={columns}
             handleClick={(id: string) => {
               navigateToDetails(id);

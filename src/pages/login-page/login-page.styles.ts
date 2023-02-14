@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const LoginPageWrapped = styled.div`
   &.login-page-wrapped {
 
-    .login-page {
+    .form-container {
       width: 100%;
       max-width: 500px;
       
@@ -12,7 +12,7 @@ export const LoginPageWrapped = styled.div`
       border: 1px solid #255a88;
       border-radius: 10px;
 
-      .login-page-header {
+      .form-title {
         margin: 12px 0px;
         text-align: initial;
 
@@ -21,15 +21,11 @@ export const LoginPageWrapped = styled.div`
         color: #202020;
       }
 
-      .input-container {
+      .ant-form-item {
+        margin-bottom: 12px;
         .ant-form-item-label {
           padding-left: 4px;
         }
-      }
-
-      .input-password-container {
-        padding-top: 12px;
-        padding-bottom: 24px;
       }
     }
   }

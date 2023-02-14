@@ -1,11 +1,11 @@
 {
-    "loginPage": {
-        "header": "Kullanıcı Girişi",
-        "inputPlaceholder": "E-posta Adresi",
-        "inputLabel": "E-mail", 
+    "form": {
+        "title": "Kullanıcı Girişi",
+        "emailInputPlaceholder": "E-posta Adresi",
+        "emailInputLabel": "E-mail", 
         "passwordInputPlaceholder": "Şifre",
         "passwordInputLabel": "Şifre",
-        "button": "Giriş Yap"
+        "loginButtonText": "Giriş Yap"
     },
     "detailRightPanel": {
         "basicInformationRequired": "Temel Bilgiler Mecburi",
@@ -23,8 +23,8 @@
         "detailInformationTaxOfficeTitle": "Vergi Dairesi: ",
         "detailInformationTaxNumberTitle": "Vergi Kimlik No: ",
         "detailInformationInvoiceCountTitle": "Fatura Sayısı ",
-        "firstDetailFinanceTitle": "Kar Bilgileri",
-        "secondDetailFinanceTitle": "Çalışma Koşulları",
+        "profitInformationTitle": "Kar Bilgileri",
+        "workingConditionsTitle": "Çalışma Koşulları",
         "financeDataPaymentPeriodTitle": "Vade",
         "financeDataPaymentPeriodText": "3 ay",
         "financeDataPaymentMethodTitle": "Ödeme Şekli",
@@ -56,5 +56,8 @@
         "tableSecondColumn": "Vergi Kimlik No",
         "tableThirdColumn": "Vergi Dairesi",
         "tableFourthColumn": "Fatura Sayısı"
+    },
+    "notification": {
+        "loginErrorNotification": "E-posta veya şifre doğru değil!"
     }
 }

@@ -18,27 +18,27 @@ const CustomerModal = ({ open, onOK, onCancel, dataSource }: CustomerModalProps)
         onCancel={onCancel}
       >
         <Input
-          label={t("customerModal.companyNameInputLabel")}
+          label={t("customerModal.companyNameInputLabel") as string}
           placeholder={t("customerModal.companyNameInputPlaceholder")}
           layout={"horizontal"}
           defaultValue={dataSource?.companyName}
         />
         <Input
-          label={t("customerModal.taxOfficeInputLabel")}
+          label={t("customerModal.taxOfficeInputLabel") as string}
           placeholder={t("customerModal.taxOfficeInputPlaceholder")}
           layout={"horizontal"}
           defaultValue={dataSource?.taxOffice}
           type="string"
         />
         <Input
-          label={t("customerModal.taxNumberInputLabel")}
+          label={t("customerModal.taxNumberInputLabel") as string}
           placeholder={t("customerModal.taxNumberInputPlaceholder")}
           layout={"horizontal"}
           defaultValue={dataSource?.taxNumber}
           type="number"
         />
         <Input
-          label={t("customerModal.invoiceCountInputLabel")}
+          label={t("customerModal.invoiceCountInputLabel") as string}
           placeholder={t("customerModal.invoiceCountInputPlaceholder")}
           layout={"horizontal"}
           defaultValue={dataSource?.invoiceCount}

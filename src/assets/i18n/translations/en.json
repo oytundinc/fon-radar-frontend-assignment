@@ -1,11 +1,11 @@
 {
-    "loginPage": {
-        "header": "User Login",
-        "inputPlaceholder": "E-mail Address",
-        "inputLabel": "E-mail", 
+    "form": {
+        "title": "User Login",
+        "emailInputPlaceholder": "E-mail Address",
+        "emailInputLabel": "E-mail", 
         "passwordInputPlaceholder": "Password",
         "passwordInputLabel": "Password",
-        "button": "Login"
+        "loginButtonText": "Login"
     },
     "detailRightPanel": {
         "basicInformationRequired": "Basic Information Required",
@@ -23,8 +23,8 @@
         "detailInformationTaxOfficeTitle": "Tax Office: ",
         "detailInformationTaxNumberTitle": "Tax Number: ",
         "detailInformationInvoiceCountTitle": "Invoice Count: ",
-        "firstDetailFinanceTitle": "Profit Information",
-        "secondDetailFinanceTitle": "Working Conditions",
+        "profitInformationTitle": "Profit Information",
+        "workingConditionsTitle": "Working Conditions",
         "financeDataPaymentPeriodTitle": "Payment Period",
         "financeDataPaymentPeriodText": "3 mounth",
         "financeDataPaymentMethodTitle": "Payment Method",
@@ -56,5 +56,8 @@
         "tableSecondColumn": "Tax Number",
         "tableThirdColumn": "Tax Office",
         "tableFourthColumn": "Invoice Count"
+    },
+    "notification": {
+        "loginErrorNotification": "Email or password is not correct!"
     }
 }

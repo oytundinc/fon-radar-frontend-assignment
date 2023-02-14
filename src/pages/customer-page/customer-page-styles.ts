@@ -23,6 +23,7 @@ export const CustomerPageWrapped = styled.div`
         }
 
         .costumer-page-new-customer-button {
+          margin-block: auto;
           width: auto;
           padding: 0px 4px;
         }
