@@ -1,10 +1,12 @@
 {
-    "form": {
+    "loginPage": {
         "title": "用户登录",
         "emailInputPlaceholder": "电子邮件地址",
         "emailInputLabel": "电子邮件", 
+        "emailInputRequirement": "请输入您的用户名！", 
         "passwordInputPlaceholder": "密码",
         "passwordInputLabel": "密码",
+        "passwordInputRequirement": "请输入密码！",
         "loginButtonText": "登录"
     },
     "detailRightPanel": {
@@ -29,22 +31,25 @@
         "financeDataPaymentPeriodText": "3个月",
         "financeDataPaymentMethodTitle": "付款方式",
         "financeDataPaymentMethodText": "现金",
-        "financeDataLimitTitle": "限制"
+        "financeDataLimitTitle": "限制",
+        "financeDataLimitText": "800.000.00 ₺"
     },
     "detailForm": {
         "headerTitle": "顾客",
         "headerEditButtonText": "编辑",
-        "headerDeleteButtonText": "删除"
+        "headerDeleteButtonText": "删除",
+        "editModalOkText": "好的",
+        "editModalCancelText": "取消"
     },
     "customerModal": {
         "modalTitle": "客户信息",
-        "companyNameInputLabel": "公司名称",
+        "companyNameInputLabel": "公司名称:",
         "companyNameInputPlaceholder": "输入公司名称.",
-        "taxOfficeInputLabel": "税务局",
+        "taxOfficeInputLabel": "税务局:",
         "taxOfficeInputPlaceholder": "进入税务局.",
-        "taxNumberInputLabel": "税号",
+        "taxNumberInputLabel": "税号:",
         "taxNumberInputPlaceholder": "输入税号.",
-        "invoiceCountInputLabel": "发票数量",
+        "invoiceCountInputLabel": "发票数量:",
         "invoiceCountInputPlaceholder": "输入发票计数。"
     },
     "customerPage": {
@@ -52,12 +57,15 @@
         "headerAddNewCustomerButton": "添加新客户",
         "modalTitle": "客户信息",
         "searchInputPlaceholder": "搜寻客户",
-        "tableFirstColumn": "公司名称",
-        "tableSecondColumn": "税号",
-        "tableThirdColumn": "税务局",
-        "tableFourthColumn": "发票数量"
+        "companyNameColumn": "公司名称",
+        "taxNumberColumn": "税号",
+        "taxOfficeColumn": "税务局",
+        "invoiceCountColumn": "发票数量",
+        "editModalOkText": "好的",
+        "editModalCancelText": "取消"
     },
     "notification": {
-        "loginErrorNotification": "邮箱或密码不正确"
+        "loginErrorNotification": "邮箱或密码不正确",
+        "loginApiErorNotification": "无法从 API 检索用户"
     }
 }

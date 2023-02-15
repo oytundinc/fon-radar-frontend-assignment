@@ -10,7 +10,7 @@ interface DetailLeftPanelProps {
 const DetailLeftPanel = ({data}: DetailLeftPanelProps) => {
   const { t } = useTranslation();
 
-  const firstFinanceData = [
+  const profitInformationData = [
     {
       id: "1",
       title: "2019",
@@ -28,7 +28,7 @@ const DetailLeftPanel = ({data}: DetailLeftPanelProps) => {
     },
   ];
 
-  const secondFinanceData = [
+  const workingConditionsData = [
     {
       id: "1",
       title: t("detailLeftPanel.financeDataPaymentPeriodTitle"),
@@ -42,7 +42,7 @@ const DetailLeftPanel = ({data}: DetailLeftPanelProps) => {
     {
       id: "3",
       title: t("detailLeftPanel.financeDataLimitTitle"),
-      text: "800.000.00 ₺",
+      text: t("detailLeftPanel.financeDataLimitText"),
     },
   ];
 
@@ -67,12 +67,12 @@ const DetailLeftPanel = ({data}: DetailLeftPanelProps) => {
 
       <div className="profit-container">
         <DetailFinance
-          financeTitle={t("detailLeftPanel.firstDetailFinanceTitle")}
-          financeData={firstFinanceData}
+          financeTitle={t("detailLeftPanel.profitInformationTitle")}
+          financeData={profitInformationData}
         />
         <DetailFinance
-          financeTitle={t("detailLeftPanel.secondDetailFinanceTitle")}
-          financeData={secondFinanceData}
+          financeTitle={t("detailLeftPanel.workingConditionsTitle")}
+          financeData={workingConditionsData}
         />
       </div>
     </>

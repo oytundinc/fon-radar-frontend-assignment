@@ -13,8 +13,8 @@ const LanguageSelect = () => {
   }
 
   const optionsLanguage = [
-    { value: "tr", label: "TR" },
     { value: "en", label: "EN" },
+    { value: "tr", label: "TR" },
     { value: "cn", label: "CN" },
     { value: "he", label: "HE" },
   ];
@@ -27,7 +27,7 @@ const LanguageSelect = () => {
 
   return (
     <WrappedSelect
-      defaultValue="tr"
+      defaultValue="en"
       options={optionsLanguage}
       onChange={setLanguage}
     />

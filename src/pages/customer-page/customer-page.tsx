@@ -120,6 +120,8 @@ export const CustomerPage = () => {
           open={isModalOpen}
           onOK={handleOk}
           onCancel={handleCancel}
+          okText={t("customerPage.editModalOkText")}
+          cancelText={t("customerPage.editModalCancelText")}
         />
       </LayoutContainer>
     </CustomerPageWrapped>

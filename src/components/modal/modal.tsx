@@ -8,6 +8,8 @@ export type ModalProps = {
   onOK?: () => void;
   onCancel?: () => void;
   title: string;
+  okText: string;
+  cancelText: string;
 };
 
 export const Modal = ({
@@ -17,6 +19,8 @@ export const Modal = ({
   closable,
   onCancel,
   onOK,
+  okText,
+  cancelText,
 }: ModalProps) => {
   return (
     <ModalStyled
@@ -25,6 +29,8 @@ export const Modal = ({
       closable={closable}
       onOK={onOK}
       onCancel={onCancel}
+      okText={okText}
+      cancelText={cancelText}
     >
       {children}
     </ModalStyled>

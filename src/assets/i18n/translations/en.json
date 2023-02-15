@@ -1,10 +1,12 @@
 {
-    "form": {
+    "loginPage": {
         "title": "User Login",
         "emailInputPlaceholder": "E-mail Address",
         "emailInputLabel": "E-mail", 
+        "emailInputRequirement": "Please input your username!",
         "passwordInputPlaceholder": "Password",
         "passwordInputLabel": "Password",
+        "passwordInputRequirement": "Please input your password!",
         "loginButtonText": "Login"
     },
     "detailRightPanel": {
@@ -29,22 +31,25 @@
         "financeDataPaymentPeriodText": "3 mounth",
         "financeDataPaymentMethodTitle": "Payment Method",
         "financeDataPaymentMethodText": "Cash",
-        "financeDataLimitTitle": "Limit"
+        "financeDataLimitTitle": "Limit",
+        "financeDataLimitText": "800.000.00 ₺"
     },
     "detailForm": {
         "headerTitle": "Customer",
         "headerEditButtonText": "Edit",
-        "headerDeleteButtonText": "Delete"
+        "headerDeleteButtonText": "Delete",
+        "editModalOkText": "Ok",
+        "editModalCancelText": "Cancel"
     },
     "customerModal": {
         "modalTitle": "Customer Information",
-        "companyNameInputLabel": "Company Name",
+        "companyNameInputLabel": "Company Name:",
         "companyNameInputPlaceholder": "Enter Company Name.",
-        "taxOfficeInputLabel": "Tax Office",
+        "taxOfficeInputLabel": "Tax Office:",
         "taxOfficeInputPlaceholder": "Enter Tax Office.",
-        "taxNumberInputLabel": "Tax Number",
+        "taxNumberInputLabel": "Tax Number:",
         "taxNumberInputPlaceholder": "Enter Tax Number.",
-        "invoiceCountInputLabel": "Invoice Count",
+        "invoiceCountInputLabel": "Invoice Count:",
         "invoiceCountInputPlaceholder": "Enter Invoice Count."
     },
     "customerPage": {
@@ -52,12 +57,15 @@
         "headerAddNewCustomerButton": "Add New Customer",
         "modalTitle": "Customer Information",
         "searchInputPlaceholder": "Search Customer",
-        "tableFirstColumn": "Company Name",
-        "tableSecondColumn": "Tax Number",
-        "tableThirdColumn": "Tax Office",
-        "tableFourthColumn": "Invoice Count"
+        "companyNameColumn": "Company Name",
+        "taxNumberColumn": "Tax Number",
+        "taxOfficeColumn": "Tax Office",
+        "invoiceCountColumn": "Invoice Count",
+        "editModalOkText": "Ok",
+        "editModalCancelText": "Cancel"
     },
     "notification": {
-        "loginErrorNotification": "Email or password is not correct!"
+        "loginErrorNotification": "Email or password is not correct!",
+        "loginApiErorNotification": "Couldn't retrieve users from API"
     }
 }

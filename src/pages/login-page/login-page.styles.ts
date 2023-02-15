@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const LoginPageWrapped = styled.div`
   &.login-page-wrapped {
-
     .form-container {
       width: 100%;
       max-width: 500px;
-      
+
       margin-top: 120px;
       padding: 20px;
       border: 1px solid #255a88;
@@ -25,6 +24,12 @@ export const LoginPageWrapped = styled.div`
         margin-bottom: 12px;
         .ant-form-item-label {
           padding-left: 4px;
+        }
+        .ant-form-item-control {
+          .ant-form-item-explain-error {
+            float: left;
+            padding-left: 4px;
+          }
         }
       }
     }

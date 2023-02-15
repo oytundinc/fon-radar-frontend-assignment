@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import Header from "../../pages/header/header";
+import Header from "../header/header";
 import { LayoutStyled } from "./layout.styles";
 
 type LayoutProps = {

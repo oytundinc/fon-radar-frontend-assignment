@@ -81,6 +81,8 @@ const DetailForm = ({ id }: DetailFormProps) => {
           onOK={handleOk}
           onCancel={handleCancel}
           dataSource={data}
+          okText={t("detailForm.editModalOkText")}
+          cancelText={t("detailForm.editModalCancelText")}
         />
       </Row>
     </DetailFormStyled>

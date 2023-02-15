@@ -1,10 +1,12 @@
 {
-    "form": {
+    "loginPage": {
         "title": "Kullanıcı Girişi",
         "emailInputPlaceholder": "E-posta Adresi",
         "emailInputLabel": "E-mail", 
+        "emailInputRequirement": "Lütfen kullanıcı adınızı giriniz!",
         "passwordInputPlaceholder": "Şifre",
         "passwordInputLabel": "Şifre",
+        "passwordInputRequirement": "Lütfen şifrenizi girin!",
         "loginButtonText": "Giriş Yap"
     },
     "detailRightPanel": {
@@ -29,22 +31,25 @@
         "financeDataPaymentPeriodText": "3 ay",
         "financeDataPaymentMethodTitle": "Ödeme Şekli",
         "financeDataPaymentMethodText": "Nakit",
-        "financeDataLimitTitle": "Limit"
+        "financeDataLimitTitle": "Limit",
+        "financeDataLimitText": "800.000.00 ₺"
     },
     "detailForm": {
         "headerTitle": "Müşteri",
         "headerEditButtonText": "Düzenle",
-        "headerDeleteButtonText": "Sil"
+        "headerDeleteButtonText": "Sil",
+        "editModalOkText": "Tamam",
+        "editModalCancelText": "İptal"
     },
     "customerModal": {
         "modalTitle": "Müşteri Bilgileri",
-        "companyNameInputLabel": "Firma Adı",
+        "companyNameInputLabel": "Firma Adı:",
         "companyNameInputPlaceholder": "Firma Adı Giriniz.",
-        "taxOfficeInputLabel": "Vergi Dairesi",
+        "taxOfficeInputLabel": "Vergi Dairesi:",
         "taxOfficeInputPlaceholder": "Vergi Dairesini Giriniz.",
-        "taxNumberInputLabel": "Vergi Kimlik No",
+        "taxNumberInputLabel": "Vergi Kimlik No:",
         "taxNumberInputPlaceholder": "Vergi Kimlik No Giriniz.",
-        "invoiceCountInputLabel": "Fatura Sayısı",
+        "invoiceCountInputLabel": "Fatura Sayısı:",
         "invoiceCountInputPlaceholder": "Fatura Sayısı Giriniz."
     },
     "customerPage": {
@@ -52,12 +57,15 @@
         "headerAddNewCustomerButton": "Yeni Müşteri",
         "modalTitle": "Müşteri Bilgileri",
         "searchInputPlaceholder": "Müşteri Ara",
-        "tableFirstColumn": "Firma Adı",
-        "tableSecondColumn": "Vergi Kimlik No",
-        "tableThirdColumn": "Vergi Dairesi",
-        "tableFourthColumn": "Fatura Sayısı"
+        "companyNameColumn": "Firma Adı",
+        "taxNumberColumn": "Vergi Kimlik No",
+        "taxOfficeColumn": "Vergi Dairesi",
+        "invoiceCountColumn": "Fatura Sayısı",
+        "editModalOkText": "Tamam",
+        "editModalCancelText": "İptal"
     },
     "notification": {
-        "loginErrorNotification": "E-posta veya şifre doğru değil!"
+        "loginErrorNotification": "E-posta veya şifre doğru değil!",
+        "loginApiErorNotification": "API'dan kullanıcılar alınamadı"
     }
 }

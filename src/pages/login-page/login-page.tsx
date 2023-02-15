@@ -15,7 +15,6 @@ export const LoginPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { getAllUsers } = useUserApi();
-  const [users, setUsers] = useState<UserData[]>([]);
   const [userName, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -26,27 +25,37 @@ export const LoginPage = () => {
     return true;
   };
 
-  const navigateToCustomerPage = () => {
+  const checkUserAndNavigateToCustomerPage = (users: UserData[]) => {
+    const found = findUser(users);
+    if (found !== undefined) {
+      navigate("/customer-page");
+    } else {
+      showErrorNotification(t("notification.loginErrorNotification"), 3);
+    }
+  };
+
+  const findUser = (users: UserData[]) => {
+    return users.find(
+      (user: UserData) =>
+        userName === user.username && password === user.password
+    );
+  };
+
+  const login = () => {
     if (validate()) {
-      if (users === undefined || users.length === 0) {
-        fetchData();
-      }
-      const found = users.find(
-        (user: UserData) =>
-          userName === user.username && password === user.password
-      );
-      if (found !== undefined) {
-        navigate('/customer-page');
-      } else {
-        showErrorNotification(t("notification.loginErrorNotification"), 3)
-      }
+      fetchData().then((response) => {
+        if (response !== undefined) {
+          checkUserAndNavigateToCustomerPage(response.data);
+        } else {
+          showErrorNotification(t("notification.loginErrorNotification"));
+        }
+      });
     }
   };
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await getAllUsers();
-      setUsers(response.data);
+      return await getAllUsers();
     } catch (error) {}
   }, [getAllUsers]);
 
@@ -55,16 +64,19 @@ export const LoginPage = () => {
       <LayoutContainer>
         <div className="form-container">
           <Form layout="vertical">
-            <h3 className="form-title">{t("form.title")}</h3>
+            <h3 className="form-title">{t("loginPage.title")}</h3>
             <Form.Item
-              label={t("form.emailInputLabel")}
+              label={t("loginPage.emailInputLabel")}
               name={"userName"}
               rules={[
-                { required: true, message: "Please input your username!" },
+                {
+                  required: true,
+                  message: t("loginPage.emailInputRequirement") as string,
+                },
               ]}
             >
               <Input
-                placeholder={t("form.emailInputPlaceholder")}
+                placeholder={t("loginPage.emailInputPlaceholder")}
                 layout="vertical"
                 onChange={(event) => {
                   setUserName(event.target.value);
@@ -72,14 +84,17 @@ export const LoginPage = () => {
               />
             </Form.Item>
             <Form.Item
-              label={t("form.passwordInputLabel")}
+              label={t("loginPage.passwordInputLabel")}
               name={"password"}
               rules={[
-                { required: true, message: "Please input your password!" },
+                {
+                  required: true,
+                  message: t("loginPage.passwordInputRequirement") as string,
+                },
               ]}
             >
               <InputPassword
-                placeholder={t("form.passwordInputPlaceholder")}
+                placeholder={t("loginPage.passwordInputPlaceholder")}
                 layout="vertical"
                 onChange={(event) => {
                   setPassword(event.target.value);
@@ -90,10 +105,10 @@ export const LoginPage = () => {
               <Button
                 htmlType="submit"
                 onClick={() => {
-                  navigateToCustomerPage();
+                  login();
                 }}
               >
-                {t("form.loginButtonText")}
+                {t("loginPage.loginButtonText")}
               </Button>
             </Form.Item>
           </Form>
