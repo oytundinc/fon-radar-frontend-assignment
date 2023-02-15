@@ -1,7 +1,18 @@
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import LanguageSelect from "../../widgets/language-select/language-select";
+import { Button } from "../button/button";
 import { HeaderStyled } from "./header.styles";
 
 export const Header = () => {
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const logout = () => {
+    localStorage.removeItem("auth");
+    navigate("/");
+  };
+
   return (
     <HeaderStyled>
       <div className="logo-container">
@@ -12,6 +23,13 @@ export const Header = () => {
         />
       </div>
       <LanguageSelect />
+      <Button
+        onClick={() => {
+          logout();
+        }}
+      >
+        {t("header.logOutButton")}
+      </Button>
     </HeaderStyled>
   );
 };

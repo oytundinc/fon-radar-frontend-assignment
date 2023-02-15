@@ -22,4 +22,13 @@ export const HeaderStyled = styled.div`
     position: absolute;
     right: 24px;
   }
+
+  .ant-btn {
+    width: auto;
+    min-width: 80px;
+    padding: 0px 4px;
+    position: absolute;
+    right: 96px;
+
+  }
 `;

@@ -67,5 +67,8 @@
     "notification": {
         "loginErrorNotification": "邮箱或密码不正确",
         "loginApiErorNotification": "无法从 API 检索用户"
+    },
+    "header": {
+        "logOutButton": "登出"
     }
 }

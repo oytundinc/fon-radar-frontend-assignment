@@ -67,5 +67,8 @@
     "notification": {
         "loginErrorNotification": "E-posta veya şifre doğru değil!",
         "loginApiErorNotification": "API'dan kullanıcılar alınamadı"
+    },
+    "header": {
+        "logOutButton": "Çıkış Yap"
     }
 }

@@ -7,9 +7,10 @@ import LayoutContainer from "../../components/layout/layout";
 import { LoginPageWrapped } from "./login-page.styles";
 import { useNavigate } from "react-router-dom";
 import useUserApi from "../../service/user/user.api";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { UserData } from "../../service/user/user.model";
 import { showErrorNotification } from "../../commons/notification";
+import CryptoJS from "crypto-js";
 
 export const LoginPage = () => {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ export const LoginPage = () => {
   const checkUserAndNavigateToCustomerPage = (users: UserData[]) => {
     const found = findUser(users);
     if (found !== undefined) {
+      localStorage.setItem("auth", CryptoJS.AES.encrypt(JSON.stringify(userName), "secret").toString());
       navigate("/customer-page");
     } else {
       showErrorNotification(t("notification.loginErrorNotification"), 3);
@@ -58,6 +60,16 @@ export const LoginPage = () => {
       return await getAllUsers();
     } catch (error) {}
   }, [getAllUsers]);
+
+  useEffect(() => {
+    const authValue = localStorage.getItem("auth");
+    if (authValue !== null) {
+      const decryptedValue = CryptoJS.AES.decrypt(authValue, "secret");
+      if (decryptedValue !== null) {
+        navigate("/customer-page");
+      }
+    }
+  }, [navigate]);
 
   return (
     <LoginPageWrapped className="login-page-wrapped">

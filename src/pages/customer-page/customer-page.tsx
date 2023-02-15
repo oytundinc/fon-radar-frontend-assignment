@@ -26,25 +26,25 @@ export const CustomerPage = () => {
 
   const columns = [
     {
-      title: t("customerPage.tableFirstColumn"),
+      title: t("customerPage.companyNameColumn"),
       dataIndex: "companyName",
       key: "companyName",
       sorter: (first: CustomerData, second: CustomerData) => first.companyName.localeCompare(second.companyName),
     },
     {
-      title: t("customerPage.tableSecondColumn"),
+      title: t("customerPage.taxNumberColumn"),
       dataIndex: "taxNumber",
       key: "taxNumber",
       sorter: (first: CustomerData, second: CustomerData) => first.taxNumber - second.taxNumber,
     },
     {
-      title: t("customerPage.tableThirdColumn"),
+      title: t("customerPage.taxOfficeColumn"),
       dataIndex: "taxOffice",
       key: "taxOffice",
       sorter: (first: CustomerData, second: CustomerData) => first.taxOffice.localeCompare(second.taxOffice),
     },
     {
-      title: t("customerPage.tableFourthColumn"),
+      title: t("customerPage.invoiceCountColumn"),
       dataIndex: "invoiceCount",
       key: "invoiceCount",
       sorter: (first: CustomerData, second: CustomerData) => first.invoiceCount - second.invoiceCount,

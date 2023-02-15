@@ -67,5 +67,8 @@
     "notification": {
         "loginErrorNotification": "האימייל או הסיסמה אינם נכונים!",
         "loginApiErorNotification": "לא ניתן היה לאחזר משתמשים מ-API"
+    },
+    "header": {
+        "logOutButton": "להתנתק"
     }
 }

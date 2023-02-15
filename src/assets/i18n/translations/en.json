@@ -67,5 +67,8 @@
     "notification": {
         "loginErrorNotification": "Email or password is not correct!",
         "loginApiErorNotification": "Couldn't retrieve users from API"
+    },
+    "header": {
+        "logOutButton": "Log Out"
     }
 }
