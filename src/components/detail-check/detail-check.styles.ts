@@ -5,12 +5,20 @@ export const DetailCheckStyled = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 6px;
 
   font-size: 12px;
   border: 1px solid #f6f6f6;
-  .anticon-home {
+
+  .anticon-home,
+  .anticon-snippets,
+  .anticon-book,
+  .anticon-rise,
+  .anticon-inbox,
+  .anticon-block,
+  .anticon-folder-open,
+  .anticon-form {
     font-size: 14px;
     color: #255a88;
   }

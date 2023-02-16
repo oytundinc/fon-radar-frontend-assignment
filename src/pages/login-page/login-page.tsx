@@ -28,7 +28,7 @@ export const LoginPage = () => {
 
   const checkUserAndNavigateToCustomerPage = (users: UserData[]) => {
     const found = findUser(users);
-    if (found !== undefined) {
+    if (found) {
       localStorage.setItem("auth", CryptoJS.AES.encrypt(JSON.stringify(userName), "secret").toString());
       navigate("/customer-page");
     } else {
@@ -46,7 +46,7 @@ export const LoginPage = () => {
   const login = () => {
     if (validate()) {
       fetchData().then((response) => {
-        if (response !== undefined) {
+        if (response) {
           checkUserAndNavigateToCustomerPage(response.data);
         } else {
           showErrorNotification(t("notification.loginErrorNotification"));

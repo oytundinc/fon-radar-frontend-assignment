@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/button/button";
-//import { useTranslation } from 'react-i18next';
 import { DataTable } from "../../components/data-table/data-table";
 import LayoutContainer from "../../components/layout/layout";
 import { SearchInput } from "../../components/search-input/search-input";
@@ -14,7 +13,7 @@ import { CustomerPageWrapped } from "./customer-page-styles";
 
 export const CustomerPage = () => {
   const navigate = useNavigate();
-  const { getAllCustomers } = useCustomerApi();
+  const { getAllCustomers, addCustomer } = useCustomerApi();
   const { t } = useTranslation();
 
   const [customers, setCustomers] = useState<CustomerData[]>([]);
@@ -49,6 +48,12 @@ export const CustomerPage = () => {
       key: "invoiceCount",
       sorter: (first: CustomerData, second: CustomerData) => first.invoiceCount - second.invoiceCount,
     },
+    {
+      title: t("customerPage.contactNumberColumn"),
+      dataIndex: "contactNumber",
+      key: "contactNumber",
+      sorter: (first: CustomerData, second: CustomerData) => first.contactNumber.localeCompare(second.contactNumber),
+    },
   ];
 
   const fetchData = useCallback(async () => {
@@ -58,6 +63,15 @@ export const CustomerPage = () => {
       setFilteredCustomers(response.data);
     } catch (error) {}
   }, [getAllCustomers]);
+
+  const addNewCustomer = useCallback(async (newCustomer: CustomerData) => {
+    try {
+      const response = await addCustomer(newCustomer!);
+      if (response.data) {
+        
+      }
+    } catch (error) {}
+  }, [addCustomer]);
 
   useEffect(() => {
     fetchData();
@@ -69,7 +83,10 @@ export const CustomerPage = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
+  const handleOk = (newCustomer: CustomerData) => {
+    addNewCustomer(newCustomer).then(() => {
+      fetchData();
+    });
     setIsModalOpen(false);
   };
 
@@ -118,7 +135,7 @@ export const CustomerPage = () => {
         <CustomerModal
           title={t("customerPage.modalTitle")}
           open={isModalOpen}
-          onOK={handleOk}
+          handleOk={handleOk}
           onCancel={handleCancel}
           okText={t("customerPage.editModalOkText")}
           cancelText={t("customerPage.editModalCancelText")}

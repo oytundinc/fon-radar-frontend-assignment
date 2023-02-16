@@ -25,6 +25,7 @@
         "detailInformationTaxOfficeTitle": "Tax Office: ",
         "detailInformationTaxNumberTitle": "Tax Number: ",
         "detailInformationInvoiceCountTitle": "Invoice Count: ",
+        "detailInformationContactNumberTitle": "Contact Number: ",
         "profitInformationTitle": "Profit Information",
         "workingConditionsTitle": "Working Conditions",
         "financeDataPaymentPeriodTitle": "Payment Period",
@@ -50,7 +51,9 @@
         "taxNumberInputLabel": "Tax Number:",
         "taxNumberInputPlaceholder": "Enter Tax Number.",
         "invoiceCountInputLabel": "Invoice Count:",
-        "invoiceCountInputPlaceholder": "Enter Invoice Count."
+        "invoiceCountInputPlaceholder": "Enter Invoice Count.",
+        "contactNumberInputLabel": "Contact Number:",
+        "contactNumberInputPlaceholder": "Enter Contact Number"
     },
     "customerPage": {
         "headerTitle": "Customers",
@@ -61,6 +64,7 @@
         "taxNumberColumn": "Tax Number",
         "taxOfficeColumn": "Tax Office",
         "invoiceCountColumn": "Invoice Count",
+        "contactNumberColumn": "Contact Number",
         "editModalOkText": "Ok",
         "editModalCancelText": "Cancel"
     },

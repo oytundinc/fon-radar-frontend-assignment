@@ -2,10 +2,11 @@ import { useRef } from "react";
 import { httpService } from "../http/http-service";
 import {
   CustomerApiCalls,
+  CustomerData,
   getAllCustomersResponse,
   getCustomerResponse,
 } from "./customer.model";
-import customerApiEndpoints, { getCustomerByIdPath } from "./customer.endpoint";
+import customerApiEndpoints, { customerByIdPath } from "./customer.endpoint";
 
 const useCustomerApi = (): CustomerApiCalls => {
   const generateApiCalls = (): CustomerApiCalls => {
@@ -18,7 +19,25 @@ const useCustomerApi = (): CustomerApiCalls => {
       },
       getCustomerById: async (customerId: string) => {
         const response: getCustomerResponse = await httpService.client.get(
-            getCustomerByIdPath(customerId)
+          customerByIdPath(customerId)
+        );
+        return response;
+      },
+      addCustomer: async (payload: CustomerData) => {
+        const response: getCustomerResponse = await httpService.client.post(
+          customerApiEndpoints.getCustomers, payload
+        );
+        return response;
+      },
+      updateCustomerById: async (customerId: string, payload: CustomerData) => {
+        const response: getCustomerResponse = await httpService.client.put(
+          customerByIdPath(customerId), payload
+        );
+        return response;
+      },
+      deleteCustomerById: async (customerId: string) => {
+        const response: getCustomerResponse = await httpService.client.delete(
+          customerByIdPath(customerId)
         );
         return response;
       },

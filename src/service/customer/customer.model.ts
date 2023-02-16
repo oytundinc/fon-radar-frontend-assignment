@@ -18,4 +18,7 @@ export interface CustomerData {
 export interface CustomerApiCalls {
     getAllCustomers: () => Promise<getAllCustomersResponse>;
     getCustomerById: (customerId : string) => Promise<getCustomerResponse>;
+    addCustomer: (payload : CustomerData) => Promise<getCustomerResponse>;
+    updateCustomerById: (customerId: string, payload : CustomerData) => Promise<getCustomerResponse>;
+    deleteCustomerById: (customerId : string) => Promise<getCustomerResponse>;
 }

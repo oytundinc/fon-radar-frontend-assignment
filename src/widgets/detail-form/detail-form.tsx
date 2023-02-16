@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/button/button";
 import useCustomerApi from "../../service/customer/customer.api";
 import { CustomerData } from "../../service/customer/customer.model";
@@ -14,27 +15,50 @@ interface DetailFormProps {
 }
 
 const DetailForm = ({ id }: DetailFormProps) => {
-  const [data, setData] = useState<CustomerData>();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { getCustomerById } = useCustomerApi();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
-  const fetchData = useCallback(async () => {
+  const [customer, setCustomer] = useState<CustomerData>();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { getCustomerById, updateCustomerById, deleteCustomerById } =
+    useCustomerApi();
+
+  const getCustomerDetail = useCallback(async () => {
     try {
       const response = await getCustomerById(id);
-      setData(response.data);
+      setCustomer(response.data);
     } catch (error) {}
   }, [id, getCustomerById]);
 
+  const updateCustomer = useCallback(async (updatedCustomer: CustomerData) => {
+    try {
+      const response = await updateCustomerById(id, updatedCustomer!);
+      if (response.data) {
+        setCustomer(response.data);
+      }
+    } catch (error) {}
+  }, [updateCustomerById, id]);
+
+  const deleteCustomer = useCallback(async () => {
+    try {
+      const response = await deleteCustomerById(id);
+      if (response.data) {
+        navigate("/customer-page");
+      }
+    } catch (error) {}
+  }, [deleteCustomerById, id, navigate]);
+
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    getCustomerDetail();
+  }, [getCustomerDetail]);
 
   const showModal = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
+  const handleOk = (updatedCustomer: CustomerData) => {
+    setCustomer(updatedCustomer);
+    updateCustomer(updatedCustomer);
     setIsModalOpen(false);
   };
 
@@ -61,7 +85,12 @@ const DetailForm = ({ id }: DetailFormProps) => {
             >
               {t("detailForm.headerEditButtonText")}
             </Button>
-            <Button className="detail-form-delete-button">
+            <Button
+              onClick={() => {
+                deleteCustomer();
+              }}
+              className="detail-form-delete-button"
+            >
               {t("detailForm.headerDeleteButtonText")}
             </Button>
           </div>
@@ -70,7 +99,7 @@ const DetailForm = ({ id }: DetailFormProps) => {
 
       <Row>
         <Col md={12}>
-          <DetailLeftPanel data={data} />
+          <DetailLeftPanel data={customer} />
         </Col>
         <Col md={12}>
           <DetailRightPanel />
@@ -78,9 +107,9 @@ const DetailForm = ({ id }: DetailFormProps) => {
         <CustomerModal
           title="Basic Modal"
           open={isModalOpen}
-          onOK={handleOk}
+          handleOk={handleOk}
           onCancel={handleCancel}
-          dataSource={data}
+          dataSource={customer}
           okText={t("detailForm.editModalOkText")}
           cancelText={t("detailForm.editModalCancelText")}
         />

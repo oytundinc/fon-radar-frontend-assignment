@@ -25,6 +25,7 @@
         "detailInformationTaxOfficeTitle": "משרד המס: ",
         "detailInformationTaxNumberTitle": "מספר מס: ",
         "detailInformationInvoiceCountTitle": "ספירת חשבוניות: ",
+        "detailInformationContactNumberTitle": "מספר איש קשר:",
         "profitInformationTitle": "מידע על רווחים",
         "workingConditionsTitle": "תנאי עבודה",
         "financeDataPaymentPeriodTitle": "תקופת תשלום",
@@ -50,7 +51,9 @@
         "taxNumberInputLabel": "מספר מס:",
         "taxNumberInputPlaceholder": "הזן מספר מס.",
         "invoiceCountInputLabel": "ספירת חשבוניות:",
-        "invoiceCountInputPlaceholder": "הזן את ספירת החשבוניות."
+        "invoiceCountInputPlaceholder": "הזן את ספירת החשבוניות.",
+        "contactNumberInputLabel": "מספר איש קשר:",
+        "contactNumberInputPlaceholder": "הזן מספר איש קשר"
     },
     "customerPage": {
         "headerTitle": "לקוחות",
@@ -61,6 +64,7 @@
         "taxNumberColumn": "מספר מס",
         "taxOfficeColumn": "משרד המס",
         "invoiceCountColumn": "ספירת חשבוניות",
+        "contactNumberColumn": "מספר איש קשר",
         "editModalOkText": "בסדר",
         "editModalCancelText": "לְבַטֵל"
     },

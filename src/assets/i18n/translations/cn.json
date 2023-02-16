@@ -25,6 +25,7 @@
         "detailInformationTaxOfficeTitle": "税务局: ",
         "detailInformationTaxNumberTitle": "税号: ",
         "detailInformationInvoiceCountTitle": "发票数量: ",
+        "detailInformationContactNumberTitle": "联系电话：",
         "profitInformationTitle": "盈利资讯",
         "workingConditionsTitle": "工作环境",
         "financeDataPaymentPeriodTitle": "到期",
@@ -50,7 +51,9 @@
         "taxNumberInputLabel": "税号:",
         "taxNumberInputPlaceholder": "输入税号.",
         "invoiceCountInputLabel": "发票数量:",
-        "invoiceCountInputPlaceholder": "输入发票计数。"
+        "invoiceCountInputPlaceholder": "输入发票计数。",
+        "contactNumberInputLabel": "联系电话:",
+        "contactNumberInputPlaceholder": "输入联系电话"
     },
     "customerPage": {
         "headerTitle": "顾客",
@@ -61,6 +64,7 @@
         "taxNumberColumn": "税号",
         "taxOfficeColumn": "税务局",
         "invoiceCountColumn": "发票数量",
+        "contactNumberColumn": "联系电话",
         "editModalOkText": "好的",
         "editModalCancelText": "取消"
     },

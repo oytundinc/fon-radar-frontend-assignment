@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DetailFormStyled = styled.div`
-  margin: 100px 60px;
+  margin: 80px 60px;
 
   font-size: 6px;
   border-radius: 6px;
@@ -54,7 +54,11 @@ export const DetailFormStyled = styled.div`
 
   .ant-row {
     .ant-col-md-12 {
-      padding: 0px 10px 10px;
+      padding: 0px 10px 18px;
+
+      &:last-child {
+        height: 100%;
+      }
     }
   }
 `;

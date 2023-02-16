@@ -11,9 +11,7 @@ export const WrappedSelect = ({
   defaultValue,
   onChange,
 }: SelectProps) => {
-  return (
-    <Select defaultValue={defaultValue} options={options} onChange={onChange} />
-  );
+  return <Select value={defaultValue} options={options} onChange={onChange} />;
 };
 
 export default WrappedSelect;

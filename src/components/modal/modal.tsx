@@ -5,7 +5,7 @@ export type ModalProps = {
   open?: boolean;
   children?: ReactNode;
   closable?: boolean;
-  onOK?: () => void;
+  onOk?: () => void;
   onCancel?: () => void;
   title: string;
   okText: string;
@@ -18,7 +18,7 @@ export const Modal = ({
   open,
   closable,
   onCancel,
-  onOK,
+  onOk,
   okText,
   cancelText,
 }: ModalProps) => {
@@ -27,7 +27,7 @@ export const Modal = ({
       title={title}
       open={open}
       closable={closable}
-      onOK={onOK}
+      onOk={onOk}
       onCancel={onCancel}
       okText={okText}
       cancelText={cancelText}

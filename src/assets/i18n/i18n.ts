@@ -7,11 +7,11 @@ import he from "./translations/he.json";
 
 
 const resources = {
-  tr: {
-    translation: tr,
-  },
   en: {
     translation: en,
+  },
+  tr: {
+    translation: tr,
   },
   cn: {
     translation: cn,

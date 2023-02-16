@@ -24,7 +24,8 @@
         "detailInformationCompanyNameTitle": "Ticaret Ünvanı: ",
         "detailInformationTaxOfficeTitle": "Vergi Dairesi: ",
         "detailInformationTaxNumberTitle": "Vergi Kimlik No: ",
-        "detailInformationInvoiceCountTitle": "Fatura Sayısı ",
+        "detailInformationInvoiceCountTitle": "Fatura Sayısı: ",
+        "detailInformationContactNumberTitle": "Telefon Numarası: ",
         "profitInformationTitle": "Kar Bilgileri",
         "workingConditionsTitle": "Çalışma Koşulları",
         "financeDataPaymentPeriodTitle": "Vade",
@@ -50,7 +51,9 @@
         "taxNumberInputLabel": "Vergi Kimlik No:",
         "taxNumberInputPlaceholder": "Vergi Kimlik No Giriniz.",
         "invoiceCountInputLabel": "Fatura Sayısı:",
-        "invoiceCountInputPlaceholder": "Fatura Sayısı Giriniz."
+        "invoiceCountInputPlaceholder": "Fatura Sayısı Giriniz.",
+        "contactNumberInputLabel": "Telefon Numarası:",
+        "contactNumberInputPlaceholder": "Telefon Numaranızı giriniz."
     },
     "customerPage": {
         "headerTitle": "Müşterilerim",
@@ -61,6 +64,7 @@
         "taxNumberColumn": "Vergi Kimlik No",
         "taxOfficeColumn": "Vergi Dairesi",
         "invoiceCountColumn": "Fatura Sayısı",
+        "contactNumberColumn": "Telefon Numarası",
         "editModalOkText": "Tamam",
         "editModalCancelText": "İptal"
     },

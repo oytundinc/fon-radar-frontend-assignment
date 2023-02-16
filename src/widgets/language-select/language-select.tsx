@@ -1,16 +1,16 @@
 import { WrappedSelect } from "../../components/select/select";
 import { changeLanguage } from "i18next";
+import i18n from "../../assets/i18n/i18n";
 
 const LanguageSelect = () => {
-
-  const rtlLanguages = [
-    "he"
-  ]
+  const rtlLanguages = ["he"];
 
   const changeToRtl = (eventKey: string | null) => {
-    const html = document.getElementsByTagName('html')[0]
-    html.style.direction = rtlLanguages.includes(eventKey as string) ? 'rtl' : 'ltr'
-  }
+    const html = document.getElementsByTagName("html")[0];
+    html.style.direction = rtlLanguages.includes(eventKey as string)
+      ? "rtl"
+      : "ltr";
+  };
 
   const optionsLanguage = [
     { value: "en", label: "EN" },
@@ -24,10 +24,9 @@ const LanguageSelect = () => {
     changeToRtl(value);
   };
 
-
   return (
     <WrappedSelect
-      defaultValue="en"
+      defaultValue={i18n.language}
       options={optionsLanguage}
       onChange={setLanguage}
     />

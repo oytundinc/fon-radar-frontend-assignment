@@ -64,7 +64,10 @@ const DetailLeftPanel = ({data}: DetailLeftPanelProps) => {
         title={t("detailLeftPanel.detailInformationInvoiceCountTitle")}
         text={data? data?.invoiceCount : ""}
       />
-
+      <DetailInformation
+        title={t("detailLeftPanel.detailInformationContactNumberTitle")}
+        text={data? data?.contactNumber : ""}
+      />
       <div className="profit-container">
         <DetailFinance
           financeTitle={t("detailLeftPanel.profitInformationTitle")}
