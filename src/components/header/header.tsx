@@ -23,13 +23,15 @@ export const Header = () => {
         />
       </div>
       <LanguageSelect />
-      <Button
-        onClick={() => {
-          logout();
-        }}
-      >
-        {t("header.logOutButton")}
-      </Button>
+      {localStorage.getItem("auth") !== null && (
+        <Button
+          onClick={() => {
+            logout();
+          }}
+        >
+          {t("header.logOutButton")}
+        </Button>
+      )}
     </HeaderStyled>
   );
 };

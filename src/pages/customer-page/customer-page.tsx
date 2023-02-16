@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/button/button";
 import { DataTable } from "../../components/data-table/data-table";
-import LayoutContainer from "../../components/layout/layout";
 import { SearchInput } from "../../components/search-input/search-input";
 import useCustomerApi from "../../service/customer/customer.api";
 import { CustomerData } from "../../service/customer/customer.model";
@@ -17,7 +16,9 @@ export const CustomerPage = () => {
   const { t } = useTranslation();
 
   const [customers, setCustomers] = useState<CustomerData[]>([]);
-  const [filteredCustomers, setFilteredCustomers] = useState<CustomerData[]>([]);
+  const [filteredCustomers, setFilteredCustomers] = useState<CustomerData[]>(
+    []
+  );
 
   const navigateToDetails = (customerId: string) => {
     navigate("/detail-page", { state: { id: customerId } });
@@ -28,31 +29,36 @@ export const CustomerPage = () => {
       title: t("customerPage.companyNameColumn"),
       dataIndex: "companyName",
       key: "companyName",
-      sorter: (first: CustomerData, second: CustomerData) => first.companyName.localeCompare(second.companyName),
+      sorter: (first: CustomerData, second: CustomerData) =>
+        first.companyName.localeCompare(second.companyName),
     },
     {
       title: t("customerPage.taxNumberColumn"),
       dataIndex: "taxNumber",
       key: "taxNumber",
-      sorter: (first: CustomerData, second: CustomerData) => first.taxNumber - second.taxNumber,
+      sorter: (first: CustomerData, second: CustomerData) =>
+        first.taxNumber - second.taxNumber,
     },
     {
       title: t("customerPage.taxOfficeColumn"),
       dataIndex: "taxOffice",
       key: "taxOffice",
-      sorter: (first: CustomerData, second: CustomerData) => first.taxOffice.localeCompare(second.taxOffice),
+      sorter: (first: CustomerData, second: CustomerData) =>
+        first.taxOffice.localeCompare(second.taxOffice),
     },
     {
       title: t("customerPage.invoiceCountColumn"),
       dataIndex: "invoiceCount",
       key: "invoiceCount",
-      sorter: (first: CustomerData, second: CustomerData) => first.invoiceCount - second.invoiceCount,
+      sorter: (first: CustomerData, second: CustomerData) =>
+        first.invoiceCount - second.invoiceCount,
     },
     {
       title: t("customerPage.contactNumberColumn"),
       dataIndex: "contactNumber",
       key: "contactNumber",
-      sorter: (first: CustomerData, second: CustomerData) => first.contactNumber.localeCompare(second.contactNumber),
+      sorter: (first: CustomerData, second: CustomerData) =>
+        first.contactNumber.localeCompare(second.contactNumber),
     },
   ];
 
@@ -64,14 +70,16 @@ export const CustomerPage = () => {
     } catch (error) {}
   }, [getAllCustomers]);
 
-  const addNewCustomer = useCallback(async (newCustomer: CustomerData) => {
-    try {
-      const response = await addCustomer(newCustomer!);
-      if (response.data) {
-        
-      }
-    } catch (error) {}
-  }, [addCustomer]);
+  const addNewCustomer = useCallback(
+    async (newCustomer: CustomerData) => {
+      try {
+        const response = await addCustomer(newCustomer!);
+        if (response.data) {
+        }
+      } catch (error) {}
+    },
+    [addCustomer]
+  );
 
   useEffect(() => {
     fetchData();
@@ -95,52 +103,52 @@ export const CustomerPage = () => {
   };
 
   const filterData = (value: string) => {
-    setFilteredCustomers(customers.filter((customer: CustomerData) => {
-      const loweredCaseValue = value.toLowerCase();
-      return (
-        customer.taxNumber.toString().includes(loweredCaseValue) ||
-        customer.companyName.toLowerCase().includes(loweredCaseValue)
-      );
-    }));
+    setFilteredCustomers(
+      customers.filter((customer: CustomerData) => {
+        const loweredCaseValue = value.toLowerCase();
+        return (
+          customer.taxNumber.toString().includes(loweredCaseValue) ||
+          customer.companyName.toLowerCase().includes(loweredCaseValue)
+        );
+      })
+    );
   };
   return (
     <CustomerPageWrapped className="customer-page-wrapped">
-      <LayoutContainer>
-        <Form className="customer-page">
-          <div className="customer-page-header">
-            <h3 className="customer-page-header-title">
-              {t("customerPage.headerTitle")}
-            </h3>
-            <Button
-              className="costumer-page-new-customer-button"
-              onClick={() => {
-                showModal();
-              }}
-            >
-              {t("customerPage.headerAddNewCustomerButton")}
-            </Button>
-          </div>
-          <SearchInput
-            placeholder={t("customerPage.searchInputPlaceholder")}
-            onSearch={filterData}
-          />
-          <DataTable
-            dataSource={filteredCustomers}
-            columns={columns}
-            handleClick={(id: string) => {
-              navigateToDetails(id);
+      <Form className="customer-page">
+        <div className="customer-page-header">
+          <h3 className="customer-page-header-title">
+            {t("customerPage.headerTitle")}
+          </h3>
+          <Button
+            className="costumer-page-new-customer-button"
+            onClick={() => {
+              showModal();
             }}
-          />
-        </Form>
-        <CustomerModal
-          title={t("customerPage.modalTitle")}
-          open={isModalOpen}
-          handleOk={handleOk}
-          onCancel={handleCancel}
-          okText={t("customerPage.editModalOkText")}
-          cancelText={t("customerPage.editModalCancelText")}
+          >
+            {t("customerPage.headerAddNewCustomerButton")}
+          </Button>
+        </div>
+        <SearchInput
+          placeholder={t("customerPage.searchInputPlaceholder")}
+          onSearch={filterData}
         />
-      </LayoutContainer>
+        <DataTable
+          dataSource={filteredCustomers}
+          columns={columns}
+          handleClick={(id: string) => {
+            navigateToDetails(id);
+          }}
+        />
+      </Form>
+      <CustomerModal
+        title={t("customerPage.modalTitle")}
+        open={isModalOpen}
+        handleOk={handleOk}
+        onCancel={handleCancel}
+        okText={t("customerPage.editModalOkText")}
+        cancelText={t("customerPage.editModalCancelText")}
+      />
     </CustomerPageWrapped>
   );
 };
